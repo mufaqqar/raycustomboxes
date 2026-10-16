@@ -102,8 +102,8 @@ export default function Footer() {
           <div className="flex items-center">
             <Link href="/" aria-label="Home">
               <Image
-                src="/images/erixum-logo.png"
-                alt="Erixum Packaging"
+                src="/images/logo.png"
+                alt="RayCustom Packaging"
                 width={148}
                 height={65}
                 priority
