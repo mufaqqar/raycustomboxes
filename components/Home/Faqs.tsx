@@ -55,36 +55,46 @@ const Faqs = () => {
     }
 
     return (
-        <div className="quote-wrapper overflow-y-auto md:px-[18px] h-[500px]">
-            {faqsData.map((faq, index) => (
-                <div
-                    key={index}
-                    className={`overflow-hidden flex items-start gap-5 md:px-5 px-0 pt-5 pb-0`}>
-                    <span className={`${activeIndex === index ? "bg-Wp_Green" : "bg-primary"} min-w-9 min-h-9 text-white rounded-full flex items-center justify-center cursor-pointer`}>
-                        {activeIndex === index ? <FaMinus /> : <FaPlus />}
-                    </span>
-                    <div className={`${activeIndex === index ? "border-transparent" : "border-black/50"} border-b`}>
-                        <button
-                            onClick={() => toggleFAQ(index)}
-                            className="w-full text-left pb-5 cursor-pointer">
-                            <span className="text-base font-semibold text-primary">
-                                {faq.question}
-                            </span>
 
-                        </button>
-                        {/* Answer */}
-                        <div
-                            className={`transition-all duration-300 ease-in-out ${activeIndex === index
-                                ? 'max-h pb-5 opacity-100'
-                                : 'max-h-0 opacity-0 overflow-hidden'
-                                }`}>
-                            <p className="text-[15px] text-desc">
-                                {faq.answer}
-                            </p>
+        <div className='container mx-auto  '>
+            <h2 className='text-3xl sm:text-2xl md:text-4xl xl:text-5xl text-primary text-center font-semibold leading-tight'>
+                Frequently Asked Questions (FAQs)
+            </h2>
+            <p className='text-base leading-5 text-center mt-1'>
+                Trusted by 1,000+ USA brands, We Print Boxes provides clear answers to your most common questions about custom packaging, printing, pricing, and fast delivery.
+            </p>
+
+            <div className="quote-wrapper grid md:grid-cols-2 grid-cols-1 gap-5 overflow-y-auto md:px-[18px] h-[500px]">
+                {faqsData.map((faq, index) => (
+                    <div
+                        key={index}
+                        className={`overflow-hidden flex items-start gap-5 md:px-5 px-0 pt-5 pb-0`}>
+                        <span className={`${activeIndex === index ? "bg-Wp_Green" : "bg-primary"} min-w-9 min-h-9 text-white rounded-full flex items-center justify-center cursor-pointer`}>
+                            {activeIndex === index ? <FaMinus /> : <FaPlus />}
+                        </span>
+                        <div className={`${activeIndex === index ? "border-transparent" : "border-black/50"} border-b`}>
+                            <button
+                                onClick={() => toggleFAQ(index)}
+                                className="w-full text-left pb-5 cursor-pointer">
+                                <span className="text-base font-semibold text-primary">
+                                    {faq.question}
+                                </span>
+
+                            </button>
+                            {/* Answer */}
+                            <div
+                                className={`transition-all duration-300 ease-in-out ${activeIndex === index
+                                    ? 'max-h pb-5 opacity-100'
+                                    : 'max-h-0 opacity-0 overflow-hidden'
+                                    }`}>
+                                <p className="text-[15px] text-desc">
+                                    {faq.answer}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
     )
 }

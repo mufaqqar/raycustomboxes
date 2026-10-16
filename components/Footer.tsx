@@ -95,14 +95,14 @@ function FooterLinks({
 export default function Footer() {
   return (
     <footer className="bg-primary text-white">
-      <div className="mx-auto max-w-[990px] px-5 sm:px-6 lg:px-0">
+      <div className="mx-auto container">
         {/* Top section */}
-        <div className="grid grid-cols-1 items-center gap-7 py-8 sm:grid-cols-2 lg:grid-cols-[230px_270px_1fr] lg:gap-0 lg:py-[37px]">
+        <div className="grid grid-cols-1 items-center gap-7 py-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:py-[37px]">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" aria-label="Home">
               <Image
-                src="/images/logo.png"
+                src="/images/logonew.png"
                 alt="RayCustom Packaging"
                 width={148}
                 height={65}
@@ -173,7 +173,7 @@ export default function Footer() {
         </div>
 
         {/* Footer navigation */}
-        <div className="grid grid-cols-1 gap-8 pb-8 sm:grid-cols-2 lg:grid-cols-[228px_252px_252px_1fr] lg:gap-0 lg:pb-[31px]">
+        <div className="grid grid-cols-1 gap-8 pb-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:pb-[31px]">
           <div className="relative lg:pr-7 lg:after:absolute lg:after:right-0 lg:after:top-0 lg:after:h-[62px] lg:after:w-px lg:after:bg-RC_border">
             <FooterLinks title="Main Menu" links={mainMenu} />
           </div>
