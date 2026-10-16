@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #383882;
+  --prim_hovr: #2c2c6e;
+  --RC_Green: #006039;
+  --RC_Green_hovr: #008000;
+  --title: #0a1a2bd6;
+  --desc: #585858;
+  --background: #f7f8fc;
+  --RC_border: #dddddd;
 }
 
 @theme inline {
+  --color-primary: var(--primary);
+  --color-prim_hovr: var(--prim_hovr);
+  --color-RC_Green: var(--RC_Green);
+  --color-RC_Green_hovr: var(--RC_Green_hovr);
+  --color-title: var(--title);
+  --color-desc: var(--desc);
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-RC_border: var(--RC_border);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--desc);
+}
+/* Scrollbar styling */
+.scrollDiv::-webkit-scrollbar,
+.quote-wrapper::-webkit-scrollbar {
+  width: 8px;
+  height: 2px;
+}
+
+.scrollDiv::-webkit-scrollbar-track,
+.quote-wrapper::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.scrollDiv::-webkit-scrollbar-thumb,
+.quote-wrapper::-webkit-scrollbar-thumb {
+  background: var(--RC_Green);
+}
+
+.scrollDiv::-webkit-scrollbar-thumb:hover,
+.quote-wrapper::-webkit-scrollbar-thumb:hover {
+  background: var(--RC_Green);
+  /* darker on hover */
+}
+.scrollContent h2 {
+  @apply md:text-[32px] md:leading-none text-2xl font-extrabold text-primary mb-4;
+}
+
+.scrollContent h3,
+.scrollContent h4,
+.scrollContent h5,
+.scrollContent h6 {
+  @apply md:text-[28px] text-xl font-extrabold text-primary mt-3;
+}
+
+.scrollContent p {
+  @apply text-sm mt-3 mb-5;
+}
+
+.scrollContent ul {
+  @apply list-none pl-5 mt-5 flex flex-col gap-y-5 text-sm;
+}
+.scrollContent ul li:before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--Wp_Green);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.scrollContent a {
+  @apply text-primary hover:underline;
+}
+
+.CatSlider .slick-dots li button:before {
+  content: " ";
+  opacity: 1;
+  background-color: var(--RC_border);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 30;
+  left: 0;
+  border: 1px solid transparent;
+}
+
+.CatSlider .slick-dots li.slick-active button:before {
+  opacity: 1;
+  border: 1px solid var(--color-primary)
 }
