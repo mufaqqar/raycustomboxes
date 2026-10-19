@@ -8,10 +8,10 @@ const FeaturedProducts = ({ categories }: any) => {
         <section className='py-10'>
             <div className='container mx-auto mb-8 flex md:flex-row flex-col md:gap-10 gap-8 items-center justify-between'>
                 <div className='w-full'>
-                    <h2 className='xl:text-5xl md:text-4xl sm:text-2xl text-3xl font-semibold leading-tight text-primary'>
+                    <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary mb-4'>
                         Trending And Popular Products
                     </h2>
-                    <p className='text-base leading-5 mt-1'>
+                    <p className='mt-2 max-w-2xl text-lg text-desc sm:text-lg'>
                         Explore our diverse range of customizable packaging solutions designed to suit any business. With endless shape, size,
                         and color options, create packaging that enhances your brand identity, improves product presentation, and delivers a lasting impression.
                     </p>

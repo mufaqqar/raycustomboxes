@@ -32,15 +32,15 @@ const FinishingOptions = () => {
     return (
         <section className='pt-16 pb-10'>
             <div className='container mx-auto  '>
-                <h2 className='text-3xl sm:text-2xl md:text-4xl xl:text-5xl text-primary text-center font-semibold leading-tight'>
+                <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary text-center mb-4'>
                     Luxury Finishing Options
                 </h2>
-                <p className='text-base leading-5 text-center mt-1'>
+                <p className='mx-auto mt-2 max-w-2xl text-lg text-desc sm:text-lg text-center'>
                     Elevate your packaging with stunning premium finishes that enhance appeal and sophistication. From gold and silver foils to holographic effects,<br className='hidden sm:block' />
                     our high-quality finishing options ensure a luxurious, eye-catching presentation that leaves a lasting impression.
                 </p>
             </div>
-            <div className='container mx-auto   mt-10 relative'>
+            <div className='container mx-auto mt-10 relative'>
                 <Slider ref={sliderRef} {...settings}>
                     {PremiumFinishesData.map((item, idx) => (
                         <div key={idx} className='px-3'>

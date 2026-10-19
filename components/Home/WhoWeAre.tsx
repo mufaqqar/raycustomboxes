@@ -10,14 +10,14 @@ const WhoWeAre = () => {
                     <Image src="/images/workbanner.png" alt='workbanner' width={600} height={598} className='w-full h-full' />
                 </div>
                 <div className='md:w-1/2 w-full text-desc/80'>
-                    <h2 className='text-3xl sm:text-2xl md:text-4xl xl:text-5xl text-primary font-semibold leading-tight'>
+                    <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary mb-4'>
                         Who We Are
                     </h2>
-                    <p className='text-lg mt-2'>
+                    <p className='text-lg text-desc sm:text-lg'>
                         At Custom Fit Boxes, we specialize in crafting innovative, high-quality packaging solutions that enhance brand identity.
                         Our focus on sustainability, precision, and creativity ensures your packaging leaves a lasting impact in the competitive market.
                     </p>
-                    <p className='text-lg mt-3'>
+                    <p className='text-lg text-desc sm:text-lg'>
                         Custom Fit Boxes is a USA-based company dedicated to providing high-quality custom packaging solutions to businesses across the USA and worldwide.
                     </p>
                     <div className='grid md:grid-cols-4 grid-cols-1 gap-4 mt-5'>

@@ -57,10 +57,10 @@ const Faqs = () => {
     return (
 
         <div className='container mx-auto  '>
-            <h2 className='text-3xl sm:text-2xl md:text-4xl xl:text-5xl text-primary text-center font-semibold leading-tight'>
+            <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary text-center mb-4'>
                 Frequently Asked Questions (FAQs)
             </h2>
-            <p className='text-base leading-5 text-center mt-1'>
+            <p className='mx-auto mt-2 max-w-2xl text-lg text-desc sm:text-lg text-center'>
                 Trusted by 1,000+ USA brands, We Print Boxes provides clear answers to your most common questions about custom packaging, printing, pricing, and fast delivery.
             </p>
 
