@@ -1,4 +1,6 @@
 import Banner from "@/components/Home/Banner";
+import BlogSection from "@/components/Home/BlogSection";
+import CTA from "@/components/Home/CTA";
 import CustomerReviews from "@/components/Home/CustomerReviews";
 import CustomIndustry from "@/components/Home/CustomIndustry";
 import Faqs from "@/components/Home/Faqs";
@@ -32,6 +34,8 @@ export default function Home() {
       <Faqs />
       <TrustedBrands />
       <CustomerReviews />
+      <BlogSection />
+      <CTA />
     </main>
   );
 }
