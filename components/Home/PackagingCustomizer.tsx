@@ -372,7 +372,7 @@ export default function PackagingCustomizer() {
 
     return (
         <section className="w-full bg-[#f8f8ff] px-3 py-8 sm:px-6 sm:py-12">
-            <div className="mx-auto max-w-[1240px]">
+            <div className="mx-auto container px-4">
                 {/* HEADING */}
                 <header className="mb-7 text-center sm:mb-9">
                     <div className="mb-1.5 flex items-center justify-center gap-2">
@@ -761,7 +761,7 @@ export default function PackagingCustomizer() {
                                                 style={{ color: textColor }}
                                             >
                                                 <span className="text-[8px] font-semibold tracking-[.16em] sm:text-sm">
-                                                    WE PRINT
+                                                    Ray Custom
                                                 </span>
                                                 <span className="text-sm font-black tracking-[.12em] sm:text-xl">
                                                     BOXES
@@ -839,7 +839,7 @@ export default function PackagingCustomizer() {
                                                 style={{ color: textColor }}
                                             >
                                                 <span className="text-[7px] font-semibold tracking-[.16em] sm:text-sm">
-                                                    WE PRINT
+                                                    Ray Custom
                                                 </span>
                                                 <span className="text-lg font-black tracking-[.13em] sm:text-2xl">
                                                     BOXES

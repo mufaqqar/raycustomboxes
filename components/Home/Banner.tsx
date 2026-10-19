@@ -11,7 +11,7 @@ const Banner = () => {
                         Custom Printed Boxes & Packaging Solutions in USA
                     </h1>
                     <p className='text-lg font-normal text-primary max-w-[90%] mb-8'>
-                        We Print Boxes delivers premium custom printed boxes and packaging solutions across the USA. Get wholesale packaging tailored to your brand with durable materials, luxury finishes, fast turnaround, and free shipping. Perfect for retail, shipping, and product presentation for businesses of all sizes.
+                        Ray Custom Boxes delivers premium custom printed boxes and packaging solutions across the USA. Get wholesale packaging tailored to your brand with durable materials, luxury finishes, fast turnaround, and free shipping. Perfect for retail, shipping, and product presentation for businesses of all sizes.
                     </p>
                     <div className='flex gap-3'>
                         <Link href="#" className='text-sm font-semibold uppercase text-center text-white bg-primary hover:bg-prim_hovr rounded-lg py-3 px-6 inline-flex transform translate-y-0 hover:-translate-y-0.5 transition-all ease-in-out duration-300'>

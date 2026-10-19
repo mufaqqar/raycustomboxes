@@ -11,7 +11,7 @@ const ScrollContent = () => {
                                 Custom Boxes Wholesale Suppliers in the USA
                             </h2>
                             <p className=''>
-                                Custom boxes plays a wide role in the retail market and product quality. With all the competition in the retail world, unique packaging today is a key that is required when selling a product to a consumer and when presenting a product to the customer as well as brand awareness. We Print Boxes is a wholesaler supplier of custom boxes in the USA with pride. At We Print Boxes, we manufacture luxury custom boxes at wholesale rates in the USA. Our specialty for custom packaging solutions for many industries is durability, and premium looks. We Print Boxes offers fully customizable packaging solutions at wholesale rates to any type of business ranging between big and small.
+                                Custom boxes plays a wide role in the retail market and product quality. With all the competition in the retail world, unique packaging today is a key that is required when selling a product to a consumer and when presenting a product to the customer as well as brand awareness. Ray Custom Boxes is a wholesaler supplier of custom boxes in the USA with pride. At Ray Custom Boxes, we manufacture luxury custom boxes at wholesale rates in the USA. Our specialty for custom packaging solutions for many industries is durability, and premium looks. Ray Custom Boxes offers fully customizable packaging solutions at wholesale rates to any type of business ranging between big and small.
                             </p>
                             <p>
                                 So are you starting your own venture? Or selling your homemade goods? Or operating a brand at the enterprise level? We have custom boxes in bulk at the most competitive wholesale prices. Whether you require retail display boxes, or need to ship the product in the durable shipping boxes or the luxurious packaging, we have a large variety of the styles, sizes, and finishes available to create a touch of class and pack it safely on its way.
@@ -20,7 +20,7 @@ const ScrollContent = () => {
                                 Customization of Custom Boxes with Logo Wholesale
                             </h2>
                             <p>
-                                Logos are needed in custom boxes as they are needed in the identity of brands and uniqueness of products. With the assistance of premium additional choices such as embossing, debossing, foil stamping, soft-touch lamination, and die-cut windows, our facility of custom packaging is provided by We Print Boxes at wholesale prices. Our boxes fit like a glove to create an improved presentation and be unforgettable during the unboxing. Purchasing bulk gets you affordable prices and enhances brand awareness. We can assist you to make your brand bigger, with beautiful, cost effective packaging.
+                                Logos are needed in custom boxes as they are needed in the identity of brands and uniqueness of products. With the assistance of premium additional choices such as embossing, debossing, foil stamping, soft-touch lamination, and die-cut windows, our facility of custom packaging is provided by Ray Custom Boxes at wholesale prices. Our boxes fit like a glove to create an improved presentation and be unforgettable during the unboxing. Purchasing bulk gets you affordable prices and enhances brand awareness. We can assist you to make your brand bigger, with beautiful, cost effective packaging.
                             </p>
                             <h2>
                                 The Significance of Custom Packaging in Branding Protection
@@ -29,10 +29,10 @@ const ScrollContent = () => {
                                 Packaging serves more purposes than just protecting goods; it also enhances a company's reputation and attracts clients. Custom boxes spread your message, differentiate your brand, and promote customer loyalty. Packaging that is visually appealing attracts attention and encourages people to try your product. Although quality is important, customers can't experience your product until they see it.
                             </p>
                             <h2>
-                                Enhance your brands' value with We Print Boxes
+                                Enhance your brands' value with Ray Custom Boxes
                             </h2>
                             <p>
-                                In today's market, custom packaging serves more than just protecting your products. Packaging plays three major roles: it helps clients recognize brands, engages them, and boosts the worth of products. Custom boxes from We Print Boxes provide the following objectives:
+                                In today's market, custom packaging serves more than just protecting your products. Packaging plays three major roles: it helps clients recognize brands, engages them, and boosts the worth of products. Custom boxes from Ray Custom Boxes provide the following objectives:
                             </p>
                             <ul>
                                 <li>

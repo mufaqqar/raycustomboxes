@@ -359,7 +359,7 @@ export default function QuoteForm() {
 
     return (
         <section className="min-h-screen bg-[#f2f3f8] px-3 py-5 sm:px-6 sm:py-8 lg:px-10">
-            <div className="mx-auto flex w-full max-w-[1200px] flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_12px_40px_rgba(15,23,42,0.12)] lg:min-h-[680px] lg:flex-row">
+            <div className="mx-auto flex w-full container flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_12px_40px_rgba(15,23,42,0.12)] lg:min-h-[680px] lg:flex-row">
                 {/* SIDEBAR */}
                 <aside className="flex flex-col bg-[#0b0d25] px-5 py-7 text-white sm:px-8 lg:w-[32%] lg:shrink-0 lg:px-7 lg:py-8">
                     <div className="mb-5 flex items-center gap-2">

@@ -68,7 +68,7 @@ export default function PackagingSteps() {
         <section className="relative overflow-hidden bg-primary py-16">
             <div className="mx-auto container px-4 ">
                 {/* Heading */}
-                <h2 className="md:text-[32px] text-2xl font-extrabold leading-tight text-black mb-4">
+                <h2 className="md:text-[32px] text-2xl font-extrabold leading-tight text-white/80 mb-4">
                     Custom Boxes And Packaging{" "}
                     <span className="italic text-white">
                         In 4 Steps:

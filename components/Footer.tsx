@@ -102,12 +102,12 @@ export default function Footer() {
           <div className="flex items-center">
             <Link href="/" aria-label="Home">
               <Image
-                src="/images/logonew.png"
+                src="/images/logowhite.png"
                 alt="RayCustom Packaging"
-                width={148}
-                height={65}
+                width={250}
+                height={90}
                 priority
-                className="h-auto w-[146px] object-contain"
+                className="h-auto w-[250px] object-contain"
               />
             </Link>
           </div>
@@ -133,7 +133,7 @@ export default function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div className="w-full lg:pl-1">
+          <div className="w-full lg:pl-1 lg:col-span-2 ">
             <p className="mb-[9px] text-[13px] font-normal leading-5 text-white">
               Sign up for Exclusive Offers and Updates!
             </p>
@@ -141,7 +141,7 @@ export default function Footer() {
             <form
               action="#"
               method="get"
-              className="grid grid-cols-2 gap-3 lg:grid-cols-[165px_165px_120px] lg:gap-3"
+              className="w-full grid grid-cols-2 gap-3 lg:grid-cols-3 items-end lg:gap-3"
             >
               <input
                 type="text"
@@ -164,7 +164,7 @@ export default function Footer() {
 
               <button
                 type="submit"
-                className="col-span-2 h-[32px] rounded-[3px] bg-white px-4 text-[12px] font-medium text-white transition-colors duration-200 hover:bg-white/75 lg:col-span-1"
+                className="col-span-2 h-[32px] rounded-[3px] bg-white px-4 text-[12px] font-medium text-primary transition-colors duration-200 hover:bg-white/75 lg:col-span-1"
               >
                 Subscribe
               </button>

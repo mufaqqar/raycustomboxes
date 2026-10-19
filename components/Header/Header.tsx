@@ -42,7 +42,7 @@ const Header = () => {
             <div className='container mx-auto px-4 md:py-3 py-1.5 flex items-center justify-between border-b border-RC_border md:border-none'>
                 <div>
                     <Link href="/" className="inline-flex">
-                        <Image src="/images/logonew.png" alt="logo" width={162} height={61} className="md:w-[162px] w-[90px] md:h-auto" />
+                        <Image src="/images/logonew.png" alt="logo" width={220} height={61} className="md:w-[200px] w-[90px] md:h-auto" />
                     </Link>
                 </div>
                 {mblMenu && <MblMenu setMblMenu={setMblMenu} />}
