@@ -102,6 +102,45 @@ body {
   border: 1px solid var(--color-primary)
 }
 
+.spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff
+}
+.spec-table tr:nth-child(even) {
+    background: #f1f3f6
+}
+.spec-table td {
+    padding: 14px 18px;
+    border: 1px solid #e2e6ea;
+    font-size: 14px;
+    color: #333;
+}
+.spec-table td:first-child {
+    width: 260px;
+    font-weight: 600;
+    
+}
+
+.call_box {
+  position: relative;
+}
+
+.call_box::after {
+  content: "";
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  background-image: url("/images/call.svg"); /* 👈 add this */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 1;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
