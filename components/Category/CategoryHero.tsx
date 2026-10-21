@@ -41,7 +41,7 @@ export default function CategoryHero() {
                     </h1>
 
                     {/* Description */}
-                    <p className="max-w-[610px] text-[15px] leading-[25.8px] font-normal text-desc sm:text-[16px]">
+                    <p className="max-w-[610px] text-[15px] leading-[25.8px] font-normal text-desc sm:text-[16px] mb-5">
                         Make every unboxing count with custom apparel boxes designed to
                         protect garments and enhance brand presentation. These boxes ensure
                         your customers&apos; first impression is always a &quot;wow.&quot;

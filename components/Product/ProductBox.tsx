@@ -10,7 +10,7 @@ const ProductBox = ({ data, view }: Props) => {
 
   if (view === "list") {
     return (
-      <Link href={`/product/corrugated-mailer-boxes`} className='flex md:flex-row flex-col items-center rounded-3xl overflow-hidden bg-[#f5f5f5] hover:drop-shadow-md duration-300'>
+      <Link href="/product/corrugated-mailer-boxes" className='flex md:flex-row flex-col items-center rounded-3xl overflow-hidden bg-[#f5f5f5] hover:drop-shadow-md duration-300'>
         <div className='md:w-1/5 w-full rounded-md h-60 flex items-center justify-center bg-background overflow-hidden'>
 
           <Image src="/images/pro1.jpg" alt="feature" width={310} height={384} className='w-full h-full object-cover object-center' />
