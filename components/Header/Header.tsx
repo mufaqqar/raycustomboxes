@@ -31,7 +31,7 @@ const Header = () => {
     
     return (
         <header className="bg-background relative">
-            <div className="md:hidden flex gap-2 items-center justify-center bg-RG">
+            <div className="md:hidden flex gap-2 items-center justify-center bg-primary">
                 <Link href="tel:8005588047" className="text-xs font-medium text-white px-3 py-2 rounded-lg flex justify-center items-center gap-1 transition-all duration-300 ease-in-out">
                     <FaPhoneVolume size={20} />  800 558 8047
                 </Link>
