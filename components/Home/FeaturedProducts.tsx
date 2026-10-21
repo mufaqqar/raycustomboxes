@@ -6,7 +6,7 @@ import ProductBox from '../Product/ProductBox'
 const FeaturedProducts = ({ categories }: any) => {
     return (
         <section className='py-10'>
-            <div className='container mx-auto mb-8 flex md:flex-row flex-col md:gap-10 gap-8 items-center justify-between'>
+            <div className='container mx-auto px-4 mb-8 flex md:flex-row flex-col md:gap-10 gap-8 items-center justify-between'>
                 <div className='w-full'>
                     <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary mb-4'>
                         Trending And Popular Products
@@ -22,7 +22,7 @@ const FeaturedProducts = ({ categories }: any) => {
                     </Link>
                 </div>
             </div>
-            <div className='container mx-auto grid md:grid-cols-4 grid-cols-1 gap-5'>
+            <div className='container mx-auto px-4 grid md:grid-cols-4 grid-cols-1 gap-5'>
                 {[1, 2, 3, 4, 5, 6, 7, 8].map((item, idx) => (
                     <ProductBox key={idx} data={item} view='grid' />
                 ))}
