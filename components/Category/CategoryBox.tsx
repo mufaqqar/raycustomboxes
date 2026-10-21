@@ -9,7 +9,7 @@ const CategoryBox = () => {
           <Image src="/images/pro1.jpg" alt='feature' width={229} height={234} className='w-full rounded-[20px] group-hover:scale-105 transition-all duration-400 ease-[cubic-bezier(.175,.885,.32,1.275)]' />
         </div>
         <div className='pt-2.5'>
-          <Link href="#" className='text-lg md:text-base lg:text-lg font-semibold text-center text-primary group-hover:text-RC_Green flex w-full justify-center items-center'>
+          <Link href="/category/corrugated-boxes" className='text-lg md:text-base lg:text-lg font-semibold text-center text-primary group-hover:text-RC_Green flex w-full justify-center items-center'>
             Candle Boxes
           </Link>
         </div>

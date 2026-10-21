@@ -27,7 +27,7 @@ const ProductBox = ({ data, view }: Props) => {
   }
 
   return (
-    <Link href={`/#`} className='rounded-3xl overflow-hidden bg-[#f5f5f5] hover:drop-shadow-md duration-300'>
+    <Link href={`/product/corrugated-mailer-boxes`} className='rounded-3xl overflow-hidden bg-[#f5f5f5] hover:drop-shadow-md duration-300'>
       <div className='rounded-md flex items-center justify-center h-92 lg:h-96'>
         <Image src="/images/pro1.jpg" alt="feature" width={310} height={384} className='w-full h-full object-cover object-center' />
       </div>
