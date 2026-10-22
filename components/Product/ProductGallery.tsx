@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Slider from "react-slick";
 import { useRef, useState } from "react";
@@ -13,7 +13,7 @@ const images = [
 ];
 
 export default function ProductGallery() {
-    const sliderRef = useRef<any>(null);
+    const sliderRef = useRef<Slider>(null);
     const [activeIndex, setActiveIndex] = useState(0);
 
     const goPrev = () => {
@@ -38,29 +38,36 @@ export default function ProductGallery() {
         <div className="flex gap-4 h-fit overflow-hidden">
             <div className="md:w-1/5 flex flex-col gap-3 max-h-[526px] overscroll-y-auto">
                 {images.map((img, index) => (
-                    <Image
+                    <div
                         key={index}
-                        src={img}
-                        alt="thumb"
-                        width={111}
-                        height={123}
-                        onClick={() => sliderRef.current.slickGoTo(index)}
-                        className={`w-[75px] h-auto object-cover rounded-md cursor-pointer border transition
+                        onClick={() => sliderRef.current?.slickGoTo(index)}
+                        className={`relative w-[75px] h-[94px] shrink-0 overflow-hidden rounded-md cursor-pointer border transition
               ${activeIndex === index ? "border-primary" : "border-transparent"}
             `}
-                    />
+                    >
+                        <Image
+                            src={img}
+                            alt={`thumbnail ${index + 1}`}
+                            fill
+                            sizes="75px"
+                            className="object-cover"
+                        />
+                    </div>
                 ))}
             </div>
             <div className="relative md:w-4/5 z-1">
                 <Slider ref={sliderRef} {...settings}>
                     {images.map((img, index) => (
-                        <div key={index} className="h-full">
+                        <div
+                            key={index}
+                            className="relative w-full aspect-square overflow-hidden rounded-lg bg-[#f5f5f5]"
+                        >
                             <Image
                                 src={img}
-                                alt="feature"
-                                width={800}
-                                height={800}
-                                className="w-full h-full object-cover rounded-lg bg-[#f5f5f5]"
+                                alt={`feature ${index + 1}`}
+                                fill
+                                sizes="(max-width: 768px) 100vw, 40vw"
+                                className="object-cover"
                             />
                         </div>
                     ))}
