@@ -65,8 +65,8 @@ export default function BlogSection() {
         <section className="py-16">
             <div className="mx-auto container px-4">
                 {/* HEADER */}
-                <div className="mb-3 flex items-center justify-between gap-3">
-                    <div className="min-w-0">
+                <div className="mb-3 flex md:flex-row flex-col items-center justify-between gap-3">
+                    <div className="min-w-0 md:text-left text-center">
                         <h2 className="md:text-[32px] text-2xl font-extrabold leading-tight text-primary mb-4">
                             Learn About Custom Boxes from the Pros
                         </h2>

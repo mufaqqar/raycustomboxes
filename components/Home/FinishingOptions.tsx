@@ -44,7 +44,7 @@ const FinishingOptions = () => {
                 <Slider ref={sliderRef} {...settings}>
                     {PremiumFinishesData.map((item, idx) => (
                         <div key={idx} className='px-3'>
-                            <Image src={item?.img} alt='feature' width={305} height={320} className='rounded-md' />
+                            <Image src={item?.img} alt='feature' width={305} height={320} className='rounded-md w-full h-full' />
                             <h3 className='text-lg font-medium mt-2'>
                                 {item?.name}
                             </h3>

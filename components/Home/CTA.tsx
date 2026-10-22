@@ -6,8 +6,8 @@ function CTA() {
     return (
         <section className='bg-prim_hovr py-16'>
             {/* HEADER */}
-            <div className="container mx-auto px-4 flex items-center justify-between gap-3">
-                <div className="min-w-0">
+            <div className="container mx-auto px-4 flex md:flex-row flex-col items-center justify-between gap-3">
+                <div className="min-w-0 md:text-left text-center">
                     <h2 className="md:text-[32px] text-2xl font-extrabold leading-tight text-white mb-4">
                         Learn About Custom Boxes from the Pros
                     </h2>

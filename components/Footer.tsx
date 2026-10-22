@@ -95,7 +95,7 @@ function FooterLinks({
 export default function Footer() {
   return (
     <footer className="bg-primary text-white">
-      <div className="mx-auto container">
+      <div className="mx-auto container px-4">
         {/* Top section */}
         <div className="grid grid-cols-1 items-center gap-7 py-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:py-[37px]">
           {/* Logo */}
@@ -141,7 +141,7 @@ export default function Footer() {
             <form
               action="#"
               method="get"
-              className="w-full grid grid-cols-2 gap-3 lg:grid-cols-3 items-end lg:gap-3"
+              className="w-full grid grid-cols-3 gap-1.5 lg:grid-cols-3 items-end lg:gap-3"
             >
               <input
                 type="text"
@@ -164,7 +164,7 @@ export default function Footer() {
 
               <button
                 type="submit"
-                className="col-span-2 h-[32px] rounded-[3px] bg-white px-4 text-[12px] font-medium text-primary transition-colors duration-200 hover:bg-white/75 lg:col-span-1"
+                className="md:col-span-2 h-[32px] rounded-[3px] bg-white px-4 text-[12px] font-medium text-primary transition-colors duration-200 hover:bg-white/75 lg:col-span-1"
               >
                 Subscribe
               </button>
