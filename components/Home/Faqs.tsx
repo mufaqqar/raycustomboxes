@@ -124,7 +124,7 @@ const Faqs = () => {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="pt-3 text-sm leading-7 text-desc md:text-[15px]">
+                      <p className="pt-3 text-sm leading-7 text-desc md:text-base">
                         {faq.answer}
                       </p>
                     </div>

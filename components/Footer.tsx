@@ -102,7 +102,7 @@ export default function Footer() {
           <div className="flex items-center">
             <Link href="/" aria-label="Home">
               <Image
-                src="/images/logowhite.png"
+                src="/images/whitelogo.png"
                 alt="RayCustom Packaging"
                 width={250}
                 height={90}
@@ -214,7 +214,7 @@ export default function Footer() {
               </li>
 
               <li className="flex items-start gap-[10px]">
-                <FaMapMarkerAlt className="mt-[2px] shrink-0 text-[15px] text-white" />
+                <FaMapMarkerAlt className="mt-[2px] shrink-0 text-base text-white" />
                 <a
                   href="https://maps.google.com/?q=4500+Mercantile+Plaza+Suite+300+Fort+Worth+TX+76137"
                   target="_blank"

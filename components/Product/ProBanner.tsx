@@ -21,41 +21,41 @@ const ProBanner = ({ data }: any) => {
                         </div>
                     </div>
                     <div className='mt-2.5'>
-                        <form className='grid md:grid-cols-3 grid-cols-1 gap-y-2.5 gap-x-3.75 py-3.5 px-4.5 bg-Wp_Green rounded-[25px]'>
+                        <form className='grid md:grid-cols-3 grid-cols-1 gap-y-2.5 gap-x-3.75 py-3.5 px-4.5 bg-primary rounded-[25px]'>
                             <div>
                                 <input
                                     type='text'
                                     name='name'
                                     placeholder='Full Name'
-                                    className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
+                                    className='text-base leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
                             </div>
                             <div>
                                 <input
                                     type='tel'
                                     name='phone'
                                     placeholder='Phone Number'
-                                    className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
+                                    className='text-base leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
                             </div>
                             <div>
                                 <input
                                     type='email'
                                     name='email'
                                     placeholder='Email Address'
-                                    className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
+                                    className='text-base leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
                             </div>
                             <div>
                                 <input
                                     type='number'
                                     name='length'
                                     placeholder='Length'
-                                    className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
+                                    className='text-base leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
                             </div>
                             <div>
                                 <input
                                     type='number'
                                     name='width'
                                     placeholder='Width'
-                                    className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
+                                    className='text-base leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
 
                             </div>
                             <div>
@@ -63,12 +63,12 @@ const ProBanner = ({ data }: any) => {
                                     type='number'
                                     name='depth'
                                     placeholder='Depth'
-                                    className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
+                                    className='text-base leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
                             </div>
                             <div>
                                 <select
                                     name='unit'
-                                    className="text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none">
+                                    className="text-base leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none">
                                     <option>Unit</option>
                                     <option>Inches</option>
                                     <option>CM</option>
@@ -78,7 +78,7 @@ const ProBanner = ({ data }: any) => {
                             <div>
                                 <select
                                     name="material"
-                                    className="text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none">
+                                    className="text-base leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none">
                                     <option>Material</option>
                                     <option>Kraft</option>
                                     <option>Cardboard</option>
@@ -87,7 +87,7 @@ const ProBanner = ({ data }: any) => {
                             </div>
                             <div>
                                 <select name="stock"
-                                    className="text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none">
+                                    className="text-base leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none">
                                     <option>Stock</option>
                                     <option>12pt</option>
                                     <option>14pt</option>
@@ -101,7 +101,7 @@ const ProBanner = ({ data }: any) => {
                             <div className="md:col-span-3 grid md:grid-cols-2 grid-cols-1 gap-y-2.5 gap-x-3.75">
                                 <div>
                                     <select name="printing"
-                                        className="text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none">
+                                        className="text-base leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none">
                                         <option>Printing</option>
                                         <option>1 Color</option>
                                         <option>2 Color</option>
@@ -115,21 +115,21 @@ const ProBanner = ({ data }: any) => {
                                         type='number'
                                         name='quantity'
                                         placeholder='Quantity'
-                                        className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
+                                        className='text-base leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
                                 </div>
                             </div>
                             <div className="md:col-span-3 grid md:grid-cols-2 grid-cols-1 gap-y-2.5 gap-x-3.75">
                                 <textarea name="message"
                                     placeholder='Additional Information'
-                                    className='h-full text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none'></textarea>
+                                    className='h-full text-base leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none'></textarea>
 
                                 <div className="flex flex-col gap-y-2.5 gap-x-3.75">
                                     <div className="w-full">
-                                        <label className="flex gap-1.5 text-white text-[15px] leading-none font-medium items-center justify-center py-2 px-4 border-dashed border-2 border-[#ddddddb8] rounded-sm">
+                                        <label className="flex gap-1.5 text-white text-base leading-none font-medium items-center justify-center py-2 px-4 border-dashed border-2 border-[#ddddddb8] rounded-sm">
                                             <MdOutlineCloudUpload size={20} />
                                             <span>Upload design</span>
                                             <input type="file"
-                                                className="hidden text-[15px] leading-none font-normal text-primary placeholder:text-desc bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none" />
+                                                className="hidden text-base leading-none font-normal text-primary placeholder:text-desc bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none" />
                                         </label>
                                     </div>
                                     <div className="relative self-baseline w-full">
@@ -137,11 +137,11 @@ const ProBanner = ({ data }: any) => {
                                             type='number'
                                             name='answer'
                                             placeholder='Captcha'
-                                            className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
+                                            className='text-base leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
                                         <span className="absolute right-0 bottom-0 py-1 px-2 bg-primary text-white text-lg rounded-md">1+6</span>
                                     </div>
                                     <div className=''>
-                                        <button type='submit' className='text-[13px] font-semibold uppercase text-white bg-primary hover:scale-105 transition-all duration-200 py-3 px-6 rounded-lg w-full'>
+                                        <button type='submit' className='text-[13px] font-semibold uppercase text-white bg-RC_Green hover:scale-105 transition-all duration-200 py-3 px-6 rounded-lg w-full'>
                                             Submit Now
                                         </button>
                                     </div>

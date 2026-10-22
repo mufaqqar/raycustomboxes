@@ -406,16 +406,16 @@ export default function QuoteForm() {
                         </p>
                         <div className="mt-3 space-y-3 text-[10px] text-slate-300">
                             <a
-                                href="tel:+441234567890"
+                                href="tel:+18005588047"
                                 className="flex items-center gap-2 hover:text-white"
                             >
-                                <FiPhone size={13} /> +44 (0)1234 567 890
+                                <FiPhone size={13} /> 800 558 8047
                             </a>
                             <a
-                                href="mailto:hello@example.com"
+                                href="mailto:sales@erixumpackaging.com"
                                 className="flex items-center gap-2 hover:text-white"
                             >
-                                <FiMessageCircle size={13} /> hello@example.com
+                                <FiMessageCircle size={13} /> sales@erixumpackaging.com
                             </a>
                             <p className="flex items-center gap-2">
                                 <FiClock size={13} /> Mon – Fri: 9 AM – 5 PM

@@ -19,10 +19,10 @@ function CTA() {
                 </div>
 
                 <Link
-                    href="#"
+                    href="/request-quote"
                     className="text-base font-semibold text-primary hover:text-white border border-white hover:border-white bg-white hover:bg-transparent rounded-md px-10 whitespace-nowrap h-12 duration-300 inline-flex items-center justify-center gap-2.5"
                 >
-                    Request a Qoute <FiArrowRight size={11} />
+                    Request a Quote <FiArrowRight size={11} />
                 </Link>
             </div>
         </section>

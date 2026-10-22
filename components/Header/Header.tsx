@@ -17,7 +17,7 @@ const Header = () => {
     const [mblMenu, setMblMenu] = useState(false);
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
     const navRef = useRef<HTMLUListElement>(null);
-    
+
     useEffect(() => {
         const handler = (e: MouseEvent) => {
             if (navRef.current && !navRef.current.contains(e.target as Node)) {
@@ -28,7 +28,7 @@ const Header = () => {
         document.addEventListener("mousedown", handler);
         return () => document.removeEventListener("mousedown", handler);
     }, []);
-    
+
     return (
         <header className="bg-background relative">
             <div className="md:hidden flex gap-2 items-center justify-center bg-primary">
@@ -42,7 +42,7 @@ const Header = () => {
             <div className='container mx-auto px-4 md:py-3 py-1.5 flex items-center justify-between border-b border-RC_border md:border-none'>
                 <div>
                     <Link href="/" className="inline-flex">
-                        <Image src="/images/logonew.png" alt="logo" width={220} height={61} className="md:w-[200px] w-[90px] md:h-auto" />
+                        <Image src="/images/logoblack.png" alt="logo" width={220} height={61} className="md:w-[200px] w-[150px] md:h-auto" />
                     </Link>
                 </div>
                 {mblMenu && <MblMenu setMblMenu={setMblMenu} />}
@@ -94,7 +94,7 @@ const Header = () => {
                                 {/* DROPDOWN */}
                                 {item.type === "dropdown" && (
                                     <>
-                                        <Link 
+                                        <Link
                                             href={item.slug || "#"}
                                             onMouseEnter={() => setActiveMenu(item.label)}
                                             className="text-xs xl:text-sm uppercase font-medium text-desc flex items-center gap-2 hover:scale-95 duration-300"
@@ -121,18 +121,18 @@ const Header = () => {
                                         )}
                                     </>
                                 )}
-                                
+
                                 {/* MEGA MENU */}
                                 {item.type === "mega" && (
                                     <>
-                                        <Link 
+                                        <Link
                                             href={item.slug || "#"}
                                             onMouseEnter={() => setActiveMenu(item.label)}
                                             className="text-xs xl:text-sm uppercase font-medium text-desc flex items-center gap-2 hover:scale-95 duration-300"
                                         >
                                             {item.label} <HiChevronDown />
                                         </Link>
-                                        
+
                                         {activeMenu === item.label && (
                                             <div onMouseLeave={() => setActiveMenu(null)} className="absolute w-full top-full pt-4 left-0 right-0 z-[999]">
                                                 <div className="w-[720px] bg-white shadow-[0_10px_30px_0_rgba(0,0,0,0.15)] p-5 border border-RC_border/50 border-t-2 border-t-primary bg-[radial-gradient(circle_at_top_left,rgba(55,56,130,0.05),transparent_50%),radial-gradient(circle_at_bottom_right,rgba(55,56,130,0.05),transparent_50%)]">
