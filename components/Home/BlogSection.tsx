@@ -67,11 +67,11 @@ export default function BlogSection() {
                 {/* HEADER */}
                 <div className="mb-3 flex md:flex-row flex-col items-center justify-between gap-3">
                     <div className="min-w-0 md:text-left text-center">
-                        <h2 className="md:text-[32px] text-2xl font-extrabold leading-tight text-primary mb-4">
+                        <h2 className="md:text-[32px] text-2xl font-extrabold leading-tight text-primary mb-4 md:text-left text-center">
                             Learn About Custom Boxes from the Pros
                         </h2>
 
-                        <p className="mt-2 max-w-2xl text-lg text-desc sm:text-lg">
+                        <p className="mt-2 max-w-2xl text-lg text-desc sm:text-lg md:text-left text-center">
                             Stay updated with the latest packaging trends, design ideas,
                             and expert tips, all curated by Erum Packaging professionals.
                         </p>

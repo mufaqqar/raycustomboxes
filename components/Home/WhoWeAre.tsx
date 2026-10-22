@@ -9,7 +9,7 @@ const WhoWeAre = () => {
                 <div className='md:w-1/2 w-full'>
                     <Image src="/images/workbanner.png" alt='workbanner' width={600} height={598} className='w-full h-full' />
                 </div>
-                <div className='md:w-1/2 w-full text-desc/80'>
+                <div className='md:w-1/2 w-full text-desc/80 md:text-left text-center'>
                     <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary mb-4'>
                         Who We Are
                     </h2>

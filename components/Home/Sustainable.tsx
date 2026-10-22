@@ -13,10 +13,10 @@ const Sustainable = () => {
                     <Image src="/images/instant.png" alt='instant' width={600} height={598} className='w-full h-full' />
                 </div>
                 <div className='md:w-1/2 w-full'>
-                    <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary mb-4'>
+                    <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary mb-4 md:text-left text-center'>
                         Better Packaging Choices
                     </h2>
-                    <p className='mt-2 text-lg text-desc sm:text-lg'>
+                    <p className='mt-2 text-lg text-desc sm:text-lg md:text-left text-center'>
                         At Custom Fit Boxes, we specialize in crafting innovative, high-quality packaging solutions that enhance brand identity.
                         Our focus on sustainability, precision, and creativity ensures your packaging leaves a lasting impact in the competitive market.
                     </p>
