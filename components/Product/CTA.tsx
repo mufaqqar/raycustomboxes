@@ -19,10 +19,10 @@ const CTA = () => {
                         related to the sustainability of packaging.
                     </p>
                     <div className='flex md:flex-row flex-col gap-5 items-center mt-10'>
-                        <Link href="#" className='text-base font-semibold text-white hover:text-primary border border-white hover:border-primary bg-primary hover:bg-transparent rounded-md md:w-60 w-full whitespace-nowrap h-12 duration-300 inline-flex items-center justify-center gap-2.5'>
+                        <Link href="/request-quote" className='text-base font-semibold text-white hover:text-primary border border-white hover:border-primary bg-primary hover:bg-transparent rounded-md md:w-60 w-full whitespace-nowrap h-12 duration-300 inline-flex items-center justify-center gap-2.5'>
                           Order Now
                         </Link>
-                        <Link href="tel:+13322541272" className='text-base font-semibold text-white hover:text-primary border border-white hover:border-primary bg-primary hover:bg-transparent rounded-md md:w-60 w-full whitespace-nowrap h-12 duration-300 inline-flex items-center justify-center gap-2.5'>
+                        <Link href="tel:+18005588047" className='text-base font-semibold text-white hover:text-primary border border-white hover:border-primary bg-primary hover:bg-transparent rounded-md md:w-60 w-full whitespace-nowrap h-12 duration-300 inline-flex items-center justify-center gap-2.5'>
                            Call Now
                         </Link>
                     </div>

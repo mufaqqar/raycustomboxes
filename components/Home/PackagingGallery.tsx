@@ -81,7 +81,7 @@ export default function PackagingGallery() {
                         Elevate your packaging with stunning premium finishes that enhance appeal and sophistication. From gold and silver foils to holographic effects,<br className='hidden sm:block' />
                         our high-quality finishing options ensure a luxurious, eye-catching presentation that leaves a lasting impression.
                     </p>
-                    <Link href="#" className="text-base font-medium text-primary text-center max-w-fit mx-auto mt-2 flex">
+                    <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-base font-medium text-primary text-center max-w-fit mx-auto mt-2 flex">
                         Follow Us On Instagram: @RefinePackaging
                     </Link>
                 </div>

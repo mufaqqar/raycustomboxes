@@ -8,51 +8,51 @@ type Props = {
 
 export const MblMenu = ({ setMblMenu }: Props) => {
     return (
-        <div className='fixed h-full w-full z-50 left-0 right-0 flex flex-col gap-y-14 items-center justify-center bg-primary bg-opacity-40 top-0 duration-300'>
+        <div className='fixed h-full w-full z-50 left-0 right-0 flex flex-col gap-y-10 items-center justify-center bg-primary/95 top-0 duration-300'>
             <button
                 onClick={() => setMblMenu(false)}
                 className="text-white text-2xl absolute right-6 top-6"
             >
                 <MdClose />
             </button>
-            <ul className='flex flex-col items-center gap-y-10 text-white'>
+            <ul className='flex flex-col items-center gap-y-6 text-white'>
                 <li>
-                    <Link href="#" className='cursor-pointer font-medium text-sm whitespace-nowrap'>
+                    <Link href="/products" onClick={() => setMblMenu(false)} className='cursor-pointer font-medium text-sm uppercase'>
                         Products
                     </Link>
                 </li>
                 <li>
-                    <Link href="#" className='cursor-pointer font-medium text-sm whitespace-nowrap'>
+                    <Link href="/industries" onClick={() => setMblMenu(false)} className='cursor-pointer font-medium text-sm uppercase'>
                         Industries
                     </Link>
                 </li>
                 <li>
-                    <Link href="#" className='cursor-pointer font-medium text-sm whitespace-nowrap'>
-                        Box by Material
+                    <Link href="/about-us" onClick={() => setMblMenu(false)} className='cursor-pointer font-medium text-sm uppercase'>
+                        About Us
                     </Link>
                 </li>
                 <li>
-                    <Link href="#" className='cursor-pointer font-medium text-sm whitespace-nowrap'>
-                        Shapes & Styles
-                    </Link>
-                </li>
-                <li>
-                    <Link href="#" className='cursor-pointer font-medium text-sm whitespace-nowrap'>
+                    <Link href="/contact-us" onClick={() => setMblMenu(false)} className='cursor-pointer font-medium text-sm uppercase'>
                         Contact Us
                     </Link>
                 </li>
                 <li>
-                    <Link href="#" className='cursor-pointer font-medium text-sm whitespace-nowrap'>
+                    <Link href="/blog" onClick={() => setMblMenu(false)} className='cursor-pointer font-medium text-sm uppercase'>
                         Blog
                     </Link>
                 </li>
+                <li>
+                    <Link href="/reviews" onClick={() => setMblMenu(false)} className='cursor-pointer font-medium text-sm uppercase'>
+                        Reviews
+                    </Link>
+                </li>
             </ul>
-            <div className='flex flex-col gap-3 items-center gap-x-2 sm:gap-x-8'>
-                <Link href="#" className='text-xs font-semibold bg-white text-primary py-2 w-48 mx-auto text-center rounded'>
-                    Request a Sample Pack
+            <div className='flex flex-col gap-3 items-center'>
+                <Link href="/request-quote" onClick={() => setMblMenu(false)} className='text-xs font-semibold bg-white text-primary py-2 w-48 mx-auto text-center rounded'>
+                    Request a Quote
                 </Link>
-                <Link href="#" className='text-xs font-semibold bg-white text-primary py-2 w-48 mx-auto text-center rounded'>
-                    Request a Sample Pack
+                <Link href="/cart" onClick={() => setMblMenu(false)} className='text-xs font-semibold bg-white text-primary py-2 w-48 mx-auto text-center rounded'>
+                    View Cart
                 </Link>
             </div>
         </div>

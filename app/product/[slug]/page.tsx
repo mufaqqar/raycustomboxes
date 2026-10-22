@@ -1,32 +1,39 @@
+import type { Metadata } from "next";
 import Feature from "@/components/Product/Feature";
 import ProBanner from "@/components/Product/ProBanner";
 import ProTabs from "@/components/Product/ProTabs";
 import RelatedPRoducts from "@/components/Product/RelatedPRoducts";
+import CTA from "@/components/Home/CTA";
+import PackagingSteps from "@/components/Home/PackagingSteps";
+import TrustedBrands from "@/components/Home/TrustedBrands";
 import { notFound } from "next/navigation";
+import { Products, getProduct } from "@/data/Products";
 
-const products = [
-    {
-        slug: "corrugated-mailer-boxes",
-        name: "Corrugated Mailer Boxes",
-        price: 100,
-        description: "Strong packaging box",
-    },
-    {
-        slug: "box-2",
-        name: "Corrugated Box 2",
-        price: 150,
-        description: "Heavy duty box",
-    },
-];
+type Props = {
+    params: Promise<{ slug: string }>;
+};
 
 export function generateStaticParams() {
-    return products.map((product) => ({ slug: product.slug }));
+    return Products.map((product) => ({ slug: product.slug }));
 }
 
-export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
+    const product = getProduct(slug);
 
-    const product = products.find((p) => p.slug === slug);
+    if (!product) {
+        return { title: "Product Not Found | Ray Custom Boxes" };
+    }
+
+    return {
+        title: `${product.name} | Ray Custom Boxes`,
+        description: product.description,
+    };
+}
+
+export default async function ProductPage({ params }: Props) {
+    const { slug } = await params;
+    const product = getProduct(slug);
 
     if (!product) return notFound();
 
@@ -36,6 +43,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <Feature />
             <ProTabs />
             <RelatedPRoducts />
+            <PackagingSteps />
+            <TrustedBrands />
+            <CTA />
         </main>
     );
 }

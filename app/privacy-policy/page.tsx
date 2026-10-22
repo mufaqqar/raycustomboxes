@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
 
             <PolicyContent
                 updated="October 22, 2026"
-                intro="Ray Custom Boxes (Erixum Packaging) respects your privacy. This Privacy Policy describes how we collect, use, disclose and safeguard information when you visit raycustomboxes.com or submit an enquiry through our site."
+                intro="Ray Custom Boxes (Ray Custom Packaging) respects your privacy. This Privacy Policy describes how we collect, use, disclose and safeguard information when you visit raycustomboxes.com or submit an enquiry through our site."
                 sections={[
                     {
                         heading: "Information we collect",

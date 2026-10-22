@@ -32,12 +32,12 @@ const Header = () => {
     return (
         <header className="bg-background relative">
             <div className="md:hidden flex gap-2 items-center justify-center bg-primary">
-                <Link href="tel:8005588047" className="text-xs font-medium text-white px-3 py-2 rounded-lg flex justify-center items-center gap-1 transition-all duration-300 ease-in-out">
-                    <FaPhoneVolume size={20} />  800 558 8047
-                </Link>
-                <Link href="https://wa.me/+20005588047" className="text-xs font-medium text-white px-3 py-2 rounded-lg flex justify-center items-center gap-1 transition-all duration-300 ease-in-out">
-                    <IoLogoWhatsapp size={18} />  WhatsApp Us
-                </Link>
+                    <Link href="tel:8005588047" className="text-xs font-medium text-white px-3 py-2 rounded-lg flex justify-center items-center gap-1 transition-all duration-300 ease-in-out">
+                        <FaPhoneVolume size={20} />  800 558 8047
+                    </Link>
+                    <Link href="https://wa.me/18005588047" target="_blank" rel="noopener noreferrer" className="text-xs font-medium text-white px-3 py-2 rounded-lg flex justify-center items-center gap-1 transition-all duration-300 ease-in-out">
+                        <IoLogoWhatsapp size={18} />  WhatsApp Us
+                    </Link>
             </div>
             <div className='container mx-auto px-4 md:py-3 py-1.5 flex items-center justify-between border-b border-RC_border md:border-none'>
                 <div>
@@ -62,15 +62,17 @@ const Header = () => {
                     <Link href="tel:8005588047" className="text-base font-medium text-primary hover:text-white px-3 py-2 rounded-lg hidden md:flex items-center gap-2 bg-transparent hover:bg-primary border-2 border-primary transition-all duration-300 ease-in-out">
                         <FaPhoneVolume size={22} />  800 558 8047
                     </Link>
-                    <Link href="https://wa.me/+20005588047" className="text-base font-medium text-white hover:text-RC_Green px-3 py-2 rounded-lg hidden md:flex items-center gap-2 bg-RC_Green hover:bg-transparent border-2 border-RC_Green transition-all duration-300 ease-in-out">
+                    <Link href="https://wa.me/18005588047" target="_blank" rel="noopener noreferrer" className="text-base font-medium text-white hover:text-RC_Green px-3 py-2 rounded-lg hidden md:flex items-center gap-2 bg-RC_Green hover:bg-transparent border-2 border-RC_Green transition-all duration-300 ease-in-out">
                         <IoLogoWhatsapp size={22} />  WhatsApp Us
                     </Link>
                     <button onClick={() => setMblMenu(!mblMenu)} className="text-primary text-2xl md:hidden flex items-center gap-5">
                         {!mblMenu ? <FaBars /> : <MdClose />}
                     </button>
                     <button className="text-2xl text-primary hover:text-prim_hovr relative cursor-pointer">
-                        <span className="text-xs inline-flex w-4.5 h-4.5 rounded-full bg-primary text-white text-center justify-center items-center absolute -right-2 -top-2">0</span>
-                        <BsCart />
+                        <Link href="/cart" aria-label="Cart" className="relative inline-flex">
+                            <span className="text-xs inline-flex w-4.5 h-4.5 rounded-full bg-primary text-white text-center justify-center items-center absolute -right-2 -top-2">0</span>
+                            <BsCart />
+                        </Link>
                     </button>
                 </div>
             </div>

@@ -1,43 +1,52 @@
+import type { Metadata } from "next";
 import CategoryHero from "@/components/Category/CategoryHero";
 import CateInfo from "@/components/Category/CateInfo";
 import ProductSearch from "@/components/Category/ProductSearch";
 import CTA from "@/components/Home/CTA";
 import FeaturedProducts from "@/components/Home/FeaturedProducts";
-import Feature from "@/components/Product/Feature";
-import ProBanner from "@/components/Product/ProBanner";
-import ProTabs from "@/components/Product/ProTabs";
-import RelatedPRoducts from "@/components/Product/RelatedPRoducts";
+import Faqs from "@/components/Home/Faqs";
+import PackagingSteps from "@/components/Home/PackagingSteps";
+import TrustedBrands from "@/components/Home/TrustedBrands";
 import { notFound } from "next/navigation";
+import { Categories, getCategory } from "@/data/Categories";
 
-const Categories = [
-    {
-        slug: "corrugated-boxes",
-        name: "Corrugated Boxes",
-    },
-    {
-        slug: "corrugated-boxes",
-        name: "Corrugated Boxes",
-        description: "Heavy duty box",
-    },
-];
+type Props = {
+    params: Promise<{ slug: string }>;
+};
 
 export function generateStaticParams() {
     return Categories.map((category) => ({ slug: category.slug }));
 }
 
-export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
+    const category = getCategory(slug);
 
-    const category = Categories.find((p) => p.slug === slug);
+    if (!category) {
+        return { title: "Category Not Found | Ray Custom Boxes" };
+    }
+
+    return {
+        title: `${category.name} | Ray Custom Boxes`,
+        description: category.description,
+    };
+}
+
+export default async function CategoryPage({ params }: Props) {
+    const { slug } = await params;
+    const category = getCategory(slug);
 
     if (!category) return notFound();
 
     return (
         <main>
-            <CategoryHero />
+            <CategoryHero category={category} />
             <ProductSearch />
             <FeaturedProducts />
             <CateInfo />
+            <PackagingSteps />
+            <TrustedBrands />
+            <Faqs />
             <CTA />
         </main>
     );

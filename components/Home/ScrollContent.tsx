@@ -42,32 +42,32 @@ const ScrollContent = () => {
                                     <b> Product Protection:</b> Increased protection with perfect-sizing boxes designed specifically for each product.
                                 </li>
                                 <li>
-                                    <Link href="#">
+                                    <Link href="/category/cosmetic-boxes">
                                         Cosmetic Packaging Boxes
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#">
+                                    <Link href="/category/mailer-boxes">
                                         Mailer Boxes
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#">
+                                    <Link href="/category/food-boxes">
                                         Food Boxes
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#">
+                                    <Link href="/category/soap-boxes">
                                         Soap Boxes
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#">
+                                    <Link href="/category/bakery-boxes">
                                         Bakery Boxes
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#">
+                                    <Link href="/category/apparel-boxes">
                                         Apparel Boxes
                                     </Link>
                                 </li>

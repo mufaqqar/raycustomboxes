@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
-import IndustrySlider from './IndustrySlider'
+import { Products } from '@/data/Products'
 import ProductBox from '../Product/ProductBox'
 
 const FeaturedProducts = ({ categories }: any) => {
+    const items = Products.slice(0, 8)
     return (
         <section className='py-10'>
             <div className='container mx-auto px-4 mb-8 flex md:flex-row flex-col md:gap-10 gap-8 items-center justify-between'>
@@ -17,14 +18,14 @@ const FeaturedProducts = ({ categories }: any) => {
                     </p>
                 </div>
                 <div className='md:w-fit w-full md:text-left text-center'>
-                    <Link href="#" className='text-base font-semibold text-white hover:text-primary border border-white hover:border-primary bg-primary hover:bg-transparent rounded-md px-10 whitespace-nowrap h-12 duration-300 inline-flex items-center justify-center gap-2.5'>
+                    <Link href="/products" className='text-base font-semibold text-white hover:text-primary border border-white hover:border-primary bg-primary hover:bg-transparent rounded-md px-10 whitespace-nowrap h-12 duration-300 inline-flex items-center justify-center gap-2.5'>
                         View all Products
                     </Link>
                 </div>
             </div>
             <div className='container mx-auto px-4 grid md:grid-cols-4 grid-cols-1 gap-5'>
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((item, idx) => (
-                    <ProductBox key={idx} data={item} view='grid' />
+                {items.map((product) => (
+                    <ProductBox key={product.slug} product={product} view={`grid`} />
                 ))}
             </div>
         </section>

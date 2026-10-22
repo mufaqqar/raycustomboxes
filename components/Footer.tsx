@@ -235,7 +235,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-5 border-t border-RC_border py-[15px] sm:flex-row sm:gap-4">
           <p className="text-center text-[12px] leading-5 text-white sm:text-left">
-            All rights reserved Erixum Packaging © 2026
+            All rights reserved Ray Custom Packaging © 2026
           </p>
 
           {/* Payment methods */}
