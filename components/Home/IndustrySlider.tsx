@@ -31,7 +31,7 @@ const IndustrySlider = () => {
         ]
     }
     return (
-        <section>
+        <section className='py-16'>
             <div className='max-w-[1400px] mx-auto px-5 sm:px-10'>
                 <div className='w-full'>
                     <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary text-center mb-4'>

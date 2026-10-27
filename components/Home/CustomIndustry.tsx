@@ -7,7 +7,7 @@ import { TbTruckDelivery } from 'react-icons/tb'
 
 const CustomIndustry = () => {
     return (
-        <div className='max-w-[90%] mx-auto px-5 sm:px-8 grid md:grid-cols-5 grid-cols-1 gap-4.5 md:divide-x md:divide-y-0 divide-x-0 divide-y divide-black/20 items-center mt-[-60px] rounded-xl bg-white p-5'>
+        <div className='max-w-[1260px] mx-auto px-5 sm:px-8 grid md:grid-cols-5 grid-cols-1 gap-4.5 md:divide-x md:divide-y-0 divide-x-0 divide-y divide-black/20 items-center mt-[-60px] rounded-xl bg-white p-5'>
             <div className='h-full py-2 px-2.5 flex items-center justify-center gap-2.5 hover:-translate-y-1 transition-all ease-in-out duration-300'>
                 <span className='bg-[#e9e7fa] min-w-10 h-10 rounded-full flex items-center justify-center'>
                     <LuTag className='text-2xl leading-none text-primary' />
