@@ -8,7 +8,7 @@ const WhoWeAre = () => {
         <section className='pb-14 pt-5'>
             <div className='max-w-[1400px] mx-auto px-5 sm:px-10 flex md:flex-row flex-col gap-8 items-center mt-10'>
                 <div className='md:w-1/2 w-full'>
-                    <Image src="/images/workbanner.png" alt='workbanner' width={600} height={598} className='w-full h-full' />
+                    <Image src="/images/premium.png" alt='workbanner' width={600} height={598} className='w-full h-full' />
                 </div>
                 <div className='md:w-1/2 w-full text-desc/80 md:text-left text-center'>
                     <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary mb-4'>
