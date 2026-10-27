@@ -172,7 +172,7 @@ export default function CustomerReviews() {
                         See How Brands Package Better
                     </h2>
 
-                    <p className="mx-auto mt-2 max-w-2xl text-lg text-desc sm:text-lg text-center">
+                    <p className="mx-auto mt-2 max-w-4/5 text-lg text-desc sm:text-lg text-center">
                         Real stories from real businesses. See how our custom packaging
                         helps brands elevate their product presentation and customer
                         experience.

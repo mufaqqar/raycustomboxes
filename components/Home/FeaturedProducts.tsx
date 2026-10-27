@@ -12,7 +12,7 @@ const FeaturedProducts = ({ categories }: any) => {
                     <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary mb-4 md:text-left text-center'>
                         Trending And Popular Products
                     </h2>
-                    <p className='mt-2 max-w-2xl text-lg text-desc sm:text-lg md:text-left text-center'>
+                    <p className='mt-2 max-w-4/5 text-lg text-desc sm:text-lg md:text-left text-center'>
                         Explore our diverse range of customizable packaging solutions designed to suit any business. With endless shape, size,
                         and color options, create packaging that enhances your brand identity, improves product presentation, and delivers a lasting impression.
                     </p>

@@ -12,7 +12,7 @@ function CTA() {
                         Learn About Custom Boxes from the Pros
                     </h2>
 
-                    <p className="mt-2 max-w-2xl text-lg text-white sm:text-lg">
+                    <p className="mt-2 max-w-4/5 text-lg text-white sm:text-lg">
                         Stay updated with the latest packaging trends, design ideas,
                         and expert tips, all curated by Erum Packaging professionals.
                     </p>

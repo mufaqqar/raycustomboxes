@@ -171,7 +171,7 @@ export default function TrustedBrands() {
             <div className="mx-auto max-w-[1400px] rounded-xl bg-white/75 py-7 px-5 sm:px-10 sm:py-10">
 
                 {/* Section heading */}
-                <div className="mx-auto max-w-2xl text-center">
+                <div className="mx-auto max-w-4/5 text-center">
                     <div className="mb-3 flex items-center justify-center gap-2">
                         <span className="h-px w-4 bg-primary" />
                         <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-primary">
@@ -184,7 +184,7 @@ export default function TrustedBrands() {
                         Trusted by Leading Brands Across Industries
                     </h2>
 
-                    <p className="mx-auto mt-2 max-w-2xl text-lg text-desc sm:text-lg text-center">
+                    <p className="mx-auto mt-2 max-w-4/5 text-lg text-desc sm:text-lg text-center">
                         We’re proud to partner with amazing brands that trust us for their
                         custom packaging needs. Quality, consistency, results that speak
                         for themselves.

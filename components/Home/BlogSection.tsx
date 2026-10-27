@@ -71,7 +71,7 @@ export default function BlogSection() {
                             Learn About Custom Boxes from the Pros
                         </h2>
 
-                        <p className="mt-2 max-w-2xl text-lg text-desc sm:text-lg md:text-left text-center">
+                        <p className="mt-2 max-w-4/5 text-lg text-desc sm:text-lg md:text-left text-center">
                             Stay updated with the latest packaging trends, design ideas,
                             and expert tips, all curated by Erum Packaging professionals.
                         </p>

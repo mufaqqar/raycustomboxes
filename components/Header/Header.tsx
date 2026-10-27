@@ -17,7 +17,8 @@ const Header = () => {
     const [mblMenu, setMblMenu] = useState(false);
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
     const navRef = useRef<HTMLUListElement>(null);
-
+    const [isSticky, setIsSticky] = useState(false);
+    const stickyNavRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
         const handler = (e: MouseEvent) => {
             if (navRef.current && !navRef.current.contains(e.target as Node)) {
@@ -28,16 +29,28 @@ const Header = () => {
         document.addEventListener("mousedown", handler);
         return () => document.removeEventListener("mousedown", handler);
     }, []);
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsSticky(window.scrollY > 150);
+        };
 
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        handleScroll();
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
         <header className="bg-background relative">
             <div className="md:hidden flex gap-2 items-center justify-center bg-primary">
-                    <Link href="tel:8005588047" className="text-xs font-medium text-white px-3 py-2 rounded-lg flex justify-center items-center gap-1 transition-all duration-300 ease-in-out">
-                        <FaPhoneVolume size={20} />  800 558 8047
-                    </Link>
-                    <Link href="https://wa.me/18005588047" target="_blank" rel="noopener noreferrer" className="text-xs font-medium text-white px-3 py-2 rounded-lg flex justify-center items-center gap-1 transition-all duration-300 ease-in-out">
-                        <IoLogoWhatsapp size={18} />  WhatsApp Us
-                    </Link>
+                <Link href="tel:8005588047" className="text-xs font-medium text-white px-3 py-2 rounded-lg flex justify-center items-center gap-1 transition-all duration-300 ease-in-out">
+                    <FaPhoneVolume size={20} />  800 558 8047
+                </Link>
+                <Link href="https://wa.me/18005588047" target="_blank" rel="noopener noreferrer" className="text-xs font-medium text-white px-3 py-2 rounded-lg flex justify-center items-center gap-1 transition-all duration-300 ease-in-out">
+                    <IoLogoWhatsapp size={18} />  WhatsApp Us
+                </Link>
             </div>
             <div className='max-w-[1400px] mx-auto px-5 sm:px-10 md:py-3 py-1.5 flex items-center justify-between border-b border-RC_border md:border-none'>
                 <div>
@@ -76,7 +89,13 @@ const Header = () => {
                     </button>
                 </div>
             </div>
-            <div className="max-w-[1400px] mx-auto px-5 sm:px-10 md:flex hidden items-center justify-between bg-white py-2 border border-RC_border/50 rounded">
+            <div
+                ref={stickyNavRef}
+                className={`max-w-[1400px] mx-auto px-5 sm:px-10 md:flex hidden items-center justify-between bg-white py-2 border border-RC_border/50 rounded transition-all ease-in-out duration-300 ${isSticky
+                    ? "fixed top-0 left-0 right-0 z-[1000] w-full shadow-md"
+                    : "relative"
+                    }`}
+            >
                 <nav>
                     <ul ref={navRef} className="flex md:flex-row gap-x-6 lg:gap-x-10 items-center justify-start">
                         {links.map((item) => (

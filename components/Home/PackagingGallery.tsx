@@ -77,7 +77,7 @@ export default function PackagingGallery() {
                         Get Creative Packaging Design Inspiration
 
                     </h2>
-                    <p className='mx-auto mt-2 max-w-2xl text-lg text-desc sm:text-lg text-center'>
+                    <p className='mx-auto mt-2 max-w-4/5 text-lg text-desc sm:text-lg text-center'>
                         Elevate your packaging with stunning premium finishes that enhance appeal and sophistication. From gold and silver foils to holographic effects,<br className='hidden sm:block' />
                         our high-quality finishing options ensure a luxurious, eye-catching presentation that leaves a lasting impression.
                     </p>

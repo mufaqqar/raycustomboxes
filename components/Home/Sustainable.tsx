@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { BsBoxSeam } from 'react-icons/bs'
-import { FaChevronRight } from 'react-icons/fa'
-import { GoShieldCheck } from 'react-icons/go'
-import { LuLeaf, LuUsers } from 'react-icons/lu'
+import { FaChevronRight, FaRecycle, FaTree } from 'react-icons/fa'
+import { FiBox, FiFeather, } from "react-icons/fi";
 
 const Sustainable = () => {
     return (
@@ -20,71 +18,33 @@ const Sustainable = () => {
                         At Custom Fit Boxes, we specialize in crafting innovative, high-quality packaging solutions that enhance brand identity.
                         Our focus on sustainability, precision, and creativity ensures your packaging leaves a lasting impact in the competitive market.
                     </p>
-                    <div className='grid md:grid-cols-2 grid-cols-1 gap-4 mt-5'>
-                        {[1, 2, 3, 4].map((item, idx) => (
-                            <div key={idx} className="bg-white py-4 lg:px-4 px-3 rounded-[10px] shadow-[0_4px_10px_0_rgba(0,0,0,0.1)] hover:shadow-none">
-                                <div className='w-[62px] h-[62px] rounded-full object-contain bg-background flex items-center justify-center'>
-                                    <Image src="/images/shipping.svg" alt="tiny" width="42" height="42" className="mx-auto w-[42px] h-[42px] object-contain" />
-                                </div>
+                    <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+                        {sustainabilityFeatures.map((item) => {
+                            const Icon = item.icon;
 
-                                <h3 className="text-lg leading-5 font-semibold text-primary ">
-                                    Custom Size & Style
-                                </h3>
-                                <p className="text-sm font-normal text-desc">
-                                    No matter the size of your custom packaging order, you'll get the best boxes at prices to match.
-                                </p>
-                            </div>
-                        ))}
+                            return (
+                                <div
+                                    key={item.title}
+                                    className="rounded-[10px] bg-white px-3 py-4 shadow-[0_4px_10px_0_rgba(0,0,0,0.1)] transition-shadow hover:shadow-none lg:px-4"
+                                >
+                                    <div className="mb-2 flex h-[62px] w-[62px] items-center justify-center rounded-full bg-background">
+                                        <Icon className="h-[32px] w-[32px] text-primary" />
+                                    </div>
+
+                                    <h3 className="text-lg font-semibold leading-5 text-primary">
+                                        {item.title}
+                                    </h3>
+
+                                    <p className="mt-1 text-sm font-normal text-desc">
+                                        {item.description}
+                                    </p>
+                                </div>
+                            );
+                        })}
                     </div>
                     <Link href="/about-us" className='text-base font-semibold text-white hover:text-primary border border-white hover:border-primary bg-primary hover:bg-transparent rounded-md px-4 whitespace-nowrap h-12 duration-300 inline-flex items-center justify-center gap-2.5 mt-5'>
                         Explor Sustainable Packaging <FaChevronRight className='border w-7 h-7 rounded-full p-1' />
                     </Link>
-                </div>
-            </div>
-            <div className='max-w-[1400px] mx-auto px-5 sm:px-10 grid md:grid-cols-4 grid-cols-1 gap-4.5 md:divide-x md:divide-y-0 divide-x-0 divide-y divide-black/20 items-center mt-[50px] rounded-xl bg-white p-5'>
-                <div className='h-full py-2 px-2.5 flex items-center justify-center gap-2.5 hover:-translate-y-1 transition-all ease-in-out duration-300'>
-                    <LuLeaf className='text-6xl text-primary'/>
-                    <div>
-                        <h4 className='text-base leading-none font-medium text-primary mb-1.5'>
-                            Competitive Pricing
-                        </h4>
-                        <p className='text-sm font-normal text-desc'>
-                            Order more save more unbeatable bulk pricing guaranteed.
-                        </p>
-                    </div>
-                </div>
-                <div className='h-full py-2 px-2.5 flex items-center justify-center gap-2.5 hover:-translate-y-1 transition-all ease-in-out duration-300'>
-                    <GoShieldCheck className='text-6xl text-primary'/>
-                    <div>
-                        <h4 className='text-base leading-none font-medium text-primary mb-1.5'>
-                            Competitive Pricing
-                        </h4>
-                        <p className='text-sm font-normal text-desc'>
-                            Order more save more unbeatable bulk pricing guaranteed.
-                        </p>
-                    </div>
-                </div>
-                <div className='h-full py-2 px-2.5 flex items-center justify-center gap-2.5 hover:-translate-y-1 transition-all ease-in-out duration-300'>
-                    <BsBoxSeam className='text-6xl text-primary'/>
-                    <div>
-                        <h4 className='text-base leading-none font-medium text-primary mb-1.5'>
-                            Competitive Pricing
-                        </h4>
-                        <p className='text-sm font-normal text-desc'>
-                            Order more save more unbeatable bulk pricing guaranteed.
-                        </p>
-                    </div>
-                </div>
-                <div className='h-full py-2 px-2.5 flex items-center justify-center gap-2.5 hover:-translate-y-1 transition-all ease-in-out duration-300'>
-                  <LuUsers className='text-6xl text-primary'/>
-                    <div>
-                        <h4 className='text-base leading-none font-medium text-primary mb-1.5'>
-                            Competitive Pricing
-                        </h4>
-                        <p className='text-sm font-normal text-desc'>
-                            Order more save more unbeatable bulk pricing guaranteed.
-                        </p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -92,3 +52,31 @@ const Sustainable = () => {
 }
 
 export default Sustainable
+
+
+const sustainabilityFeatures = [
+    {
+        title: "Recyclable Materials",
+        description:
+            "Packaging materials designed with recyclability in mind.",
+        icon: FaRecycle,
+    },
+    {
+        title: "Responsibly Sourced Paper",
+        description:
+            "Paper-based options from responsible sources.",
+        icon: FaTree,
+    },
+    {
+        title: "Right-Sized Packaging",
+        description:
+            "Custom dimensions that help reduce unnecessary packaging material and waste.",
+        icon: FiBox,
+    },
+    {
+        title: "Recycled Content Options",
+        description:
+            "Materials containing recycled content options where available.",
+        icon: FiFeather,
+    },
+];

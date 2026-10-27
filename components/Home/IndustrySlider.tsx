@@ -37,7 +37,7 @@ const IndustrySlider = () => {
                     <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary text-center mb-4'>
                         Choose Your Custom Packaging Boxes Style
                     </h2>
-                    <p className='mx-auto mt-2 max-w-2xl text-lg text-desc sm:text-lg text-center'>
+                    <p className='mx-auto mt-2 max-w-4/5 text-lg text-desc sm:text-lg text-center'>
                         We provide you the best packaging solutions with customized printed box service, which matches your industry and product specific needs. Get high-quality custom boxes with logo with a flexible and simple packaging process.
                     </p>
                 </div>
