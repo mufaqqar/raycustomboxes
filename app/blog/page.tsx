@@ -22,7 +22,7 @@ export default function BlogPage() {
             />
 
             <section className="bg-white py-10 md:py-14">
-                <div className="container mx-auto px-4">
+                <div className="max-w-[1400px] mx-auto px-5 sm:px-10">
                     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                         {Blogs.map((post) => (
                             <article

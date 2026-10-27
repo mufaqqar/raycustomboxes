@@ -8,7 +8,7 @@ const ProTabs = () => {
 
     return (
         <section className='py-16'>
-            <div className="container mx-auto px-4">
+            <div className="max-w-[1400px] mx-auto px-5 sm:px-10">
                 {/* Tabs */}
                 <ul className="flex gap-2 items-center p-1.5 rounded-[10px] border-b-3 border-[#e2e6ea]">
                     <li>

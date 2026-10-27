@@ -56,7 +56,7 @@ const Faqs = () => {
 
   return (
     <section className="w-full py-12 md:py-16">
-      <div className="container mx-auto px-4">
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-10">
         {/* Heading */}
         <h2 className="mb-4 text-center text-2xl font-extrabold leading-tight text-primary md:text-[32px]">
           Frequently Asked Questions (FAQs)

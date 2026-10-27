@@ -26,7 +26,7 @@ export default function ProductSearch({
 
     return (
         <section className="bg-white pt-10 md:pt-14">
-            <div className="mx-auto container px-4">
+            <div className="mx-auto max-w-[1400px] px-5 sm:px-10">
                 <div className="ml-auto w-full lg:max-w-[611px]">
                     <h2 className="md:text-[28px] text-2xl font-extrabold leading-tight text-primary mb-4 md:text-left text-center">
                         SEARCH PRODUCTS

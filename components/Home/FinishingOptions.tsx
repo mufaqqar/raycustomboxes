@@ -31,7 +31,7 @@ const FinishingOptions = () => {
     }
     return (
         <section className='pt-16 pb-10'>
-            <div className='container mx-auto  '>
+            <div className='max-w-[1400px] mx-auto  px-5 sm:px-10'>
                 <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary text-center mb-4'>
                     Luxury Finishing Options
                 </h2>
@@ -40,7 +40,7 @@ const FinishingOptions = () => {
                     our high-quality finishing options ensure a luxurious, eye-catching presentation that leaves a lasting impression.
                 </p>
             </div>
-            <div className='container mx-auto mt-10 relative'>
+            <div className='max-w-[1400px] mx-auto mt-10 px-5 sm:px-10 relative'>
                 <Slider ref={sliderRef} {...settings}>
                     {PremiumFinishesData.map((item, idx) => (
                         <div key={idx} className='px-3 h-full w-full'>

@@ -159,7 +159,7 @@ export default function CustomerReviews() {
 
     return (
         <section className="w-full bg-gradient-to-b from-[#f5f5fd] via-[#fafaff] to-[#f0effb] px-4 py-10 sm:px-0 sm:py6">
-            <div className="mx-auto container rounded-xl border border-slate-200/70 bg-white/30 px-4 py-7 sm:px-7 sm:py-9 lg:px-8">
+            <div className="mx-auto max-w-[1400px] rounded-xl border border-slate-200/70 bg-white/30 px-4 py-7 sm:px-7 sm:py-9 lg:px-8">
                 {/* HEADER */}
                 <div className="text-center">
                     <div className="mb-2 inline-flex items-center rounded-full bg-violet-100/80 px-3 py-1">

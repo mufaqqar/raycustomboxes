@@ -3,7 +3,7 @@ import Link from 'next/link'
 const ScrollContent = () => {
     return (
         <section className='py-16'>
-            <div className='container mx-auto px-4 '>
+            <div className='max-w-[1400px] mx-auto px-5 sm:px-10'>
                 <div className='bg-white md:py-10 md:px-8 px-4 py-5 rounded-[15px] shadow-[0_1px_20px_rgb(0,0,0,.09)]'>
                     <div className='scrollDiv overflow-y-auto px-[18px] h-[500px]'>
                         <div className='scrollContent'>

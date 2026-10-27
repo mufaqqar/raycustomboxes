@@ -7,7 +7,7 @@ const FeaturedProducts = ({ categories }: any) => {
     const items = Products.slice(0, 8)
     return (
         <section className='py-10'>
-            <div className='container mx-auto px-4 mb-8 flex md:flex-row flex-col md:gap-10 gap-8 items-center justify-between'>
+            <div className='max-w-[1400px] mx-auto px-5 sm:px-10 mb-8 flex md:flex-row flex-col md:gap-10 gap-8 items-center justify-between'>
                 <div className='w-full'>
                     <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary mb-4 md:text-left text-center'>
                         Trending And Popular Products
@@ -23,7 +23,7 @@ const FeaturedProducts = ({ categories }: any) => {
                     </Link>
                 </div>
             </div>
-            <div className='container mx-auto px-4 grid md:grid-cols-4 grid-cols-1 gap-5'>
+            <div className='max-w-[1400px] mx-auto px-5 sm:px-10 grid md:grid-cols-4 grid-cols-1 gap-5'>
                 {items.map((product) => (
                     <ProductBox key={product.slug} product={product} view={`grid`} />
                 ))}

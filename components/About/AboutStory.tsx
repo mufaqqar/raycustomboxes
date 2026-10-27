@@ -32,7 +32,7 @@ const pillars = [
 export default function AboutStory() {
     return (
         <section className="bg-white py-14 md:py-16">
-            <div className="container mx-auto px-4">
+            <div className="max-w-[1400px] mx-auto px-5 sm:px-10">
                 {/* Heading */}
                 <div className="mx-auto mb-10 max-w-3xl text-center">
                     <h2 className="mb-4 text-2xl font-extrabold leading-tight text-primary md:text-[32px]">Our Story</h2>

@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 export default function CateInfo() {
     return (
-        <section className="px-4 py-12 md:py-16">
-            <div className="container mx-auto grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">
+        <section className="py-12 md:py-16">
+            <div className="max-w-[1400px] px-5 sm:px-10 mx-auto grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[18px]">
                     <Image
                         src="/images/workbanner.png"

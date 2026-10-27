@@ -27,7 +27,7 @@ const benefits = [
 export default function QuoteHero() {
     return (
         <section className="bg-background">
-            <div className="container mx-auto px-4 py-10 md:py-14">
+            <div className="max-w-[1400px] mx-auto px-5 sm:px-10 py-10 md:py-14">
                 {/* Breadcrumb */}
                 <nav aria-label="Breadcrumb" className="mb-4 flex flex-wrap items-center gap-2 text-sm text-primary">
                     <Link href="/" className="transition hover:text-prim_hovr">

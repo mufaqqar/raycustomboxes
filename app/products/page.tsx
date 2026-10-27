@@ -23,7 +23,7 @@ export default function AllProductsPage() {
             />
 
             <section className="bg-white py-10 md:py-14">
-                <div className="container mx-auto px-4">
+                <div className="max-w-[1400px] mx-auto px-5 sm:px-10">
                     {/* Category chips */}
                     <div className="mb-10 flex flex-wrap gap-2">
                         {Categories.map((category) => (

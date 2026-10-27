@@ -8,7 +8,7 @@ import type { Category } from "@/data/Categories";
 export default function CategoryHero({ category }: { category: Category }) {
     return (
         <section className="bg-background px-4 py-10 md:py-14">
-            <div className="container mx-auto grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">
+            <div className="max-w-[1400px] mx-auto grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">
                 {/* Left Content */}
                 <div className="flex flex-col">
                     {/* Breadcrumb */}

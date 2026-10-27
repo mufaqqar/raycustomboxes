@@ -8,7 +8,7 @@ import type { Product } from '@/data/Products'
 const ProBanner = ({ data }: { data: Product }) => {
     return (
         <section className='pt-8 bg-background'>
-            <div className='container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 gap-8 lg:gap-10'>
+            <div className='max-w-[1400px] mx-auto px-5 sm:px-10 grid md:grid-cols-2 grid-cols-1 gap-8 lg:gap-10'>
                 <ProductGallery />
                 <div>
                     <div className='bg-white px-5 py-5 rounded-[18px] border border-RC_border'>

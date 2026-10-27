@@ -12,7 +12,7 @@ type Props = {
 export default function PolicyContent({ updated, intro, sections }: Props) {
     return (
         <section className="bg-white py-12 md:py-16">
-            <div className="container mx-auto px-4">
+            <div className="max-w-[1400px] mx-auto px-5 sm:px-10">
                 <div className="mx-auto max-w-[900px]">
                     <p className="mb-8 rounded-[10px] border border-RC_border bg-background px-5 py-3 text-xs text-desc">
                         Last updated: {updated}

@@ -95,7 +95,7 @@ function FooterLinks({
 export default function Footer() {
   return (
     <footer className="bg-primary text-white">
-      <div className="mx-auto container px-4">
+      <div className="mx-auto max-w-[1400px] px-5 sm:px-10">
         {/* Top section */}
         <div className="grid grid-cols-1 items-center gap-7 py-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:py-[37px]">
           {/* Logo */}

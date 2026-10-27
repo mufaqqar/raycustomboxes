@@ -32,7 +32,7 @@ const IndustrySlider = () => {
     }
     return (
         <section>
-            <div className='container mx-auto px-4'>
+            <div className='max-w-[1400px] mx-auto px-5 sm:px-10'>
                 <div className='w-full'>
                     <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary text-center mb-4'>
                         Choose Your Custom Packaging Boxes Style
@@ -42,7 +42,7 @@ const IndustrySlider = () => {
                     </p>
                 </div>
             </div>
-            <div className='container mx-auto px-4 mt-14 relative'>
+            <div className='max-w-[1400px] mx-auto px-5 sm:px-10 mt-14 relative'>
                 <div className=''>
                     <Slider ref={sliderRef} {...settings} className="CatSlider">
                     {['corrugated-boxes','mailer-boxes','kraft-boxes','cbd-boxes','apparel-boxes'].map((slug) => (

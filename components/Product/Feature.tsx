@@ -3,7 +3,7 @@ import Image from "next/image"
 const Feature = () => {
     return (
         <section className="bg-background pt-[26px] pb-16">
-            <div className='container mx-auto px-4 flex md:flex-row flex-col gap-5'>
+            <div className='max-w-[1400px] mx-auto px-5 sm:px-10 flex md:flex-row flex-col gap-5'>
                 <div className=''>
                     <Image src="/images/google-review.png" alt="google-review" width={271} height={39} className="py-3.5 px-2.5 rounded-[14px] bg-white mb-2 shadow-[0_6px_20px_rgb(0,0,0,0.05)]" />
                     <Image src="/images/trustpoliot.png" alt="trustpoliot" width={271} height={39} className="py-3.5 px-2.5 rounded-[14px] bg-white mb-2 shadow-[0_6px_20px_rgb(0,0,0,0.05)]" />

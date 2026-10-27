@@ -63,7 +63,7 @@ export default function BlogSection() {
 
     return (
         <section className="py-16">
-            <div className="mx-auto container px-4">
+            <div className="mx-auto max-w-[1400px] px-5 sm:px-10">
                 {/* HEADER */}
                 <div className="mb-3 flex md:flex-row flex-col items-center justify-between gap-3">
                     <div className="min-w-0 md:text-left text-center">

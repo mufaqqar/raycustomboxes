@@ -71,7 +71,7 @@ export default function PackagingGallery() {
             />
 
             {/* Gallery */}
-            <div className="mx-auto container px-4 ">
+            <div className="mx-auto max-w-[1400px] px-5 sm:px-10">
                 <div>
                     <h2 className='md:text-[32px] text-2xl font-extrabold leading-tight text-primary text-center mb-4'>
                         Get Creative Packaging Design Inspiration

@@ -8,7 +8,7 @@ import { LuLeaf, LuUsers } from 'react-icons/lu'
 const Sustainable = () => {
     return (
         <section className='py-16 bg-background'>
-            <div className='container mx-auto md:px-0 px-4 flex md:flex-row flex-col gap-8 items-center mt-10'>
+            <div className='max-w-[1400px] mx-auto md:px-0 px-5 sm:px-10 flex md:flex-row flex-col gap-8 items-center mt-10'>
                 <div className='md:w-1/2 w-full'>
                     <Image src="/images/instant.png" alt='instant' width={600} height={598} className='w-full h-full' />
                 </div>
@@ -41,7 +41,7 @@ const Sustainable = () => {
                     </Link>
                 </div>
             </div>
-            <div className='container mx-auto px-4 grid md:grid-cols-4 grid-cols-1 gap-4.5 md:divide-x md:divide-y-0 divide-x-0 divide-y divide-black/20 items-center mt-[50px] rounded-xl bg-white p-5'>
+            <div className='max-w-[1400px] mx-auto px-5 sm:px-10 grid md:grid-cols-4 grid-cols-1 gap-4.5 md:divide-x md:divide-y-0 divide-x-0 divide-y divide-black/20 items-center mt-[50px] rounded-xl bg-white p-5'>
                 <div className='h-full py-2 px-2.5 flex items-center justify-center gap-2.5 hover:-translate-y-1 transition-all ease-in-out duration-300'>
                     <LuLeaf className='text-6xl text-primary'/>
                     <div>

@@ -5,7 +5,7 @@ import { FaChevronRight } from 'react-icons/fa'
 const WhoWeAre = () => {
     return (
         <section className='pb-14 pt-5'>
-            <div className='container mx-auto md:px-0 px-4 flex md:flex-row flex-col gap-8 items-center mt-10'>
+            <div className='max-w-[1400px] mx-auto px-5 sm:px-10 flex md:flex-row flex-col gap-8 items-center mt-10'>
                 <div className='md:w-1/2 w-full'>
                     <Image src="/images/workbanner.png" alt='workbanner' width={600} height={598} className='w-full h-full' />
                 </div>

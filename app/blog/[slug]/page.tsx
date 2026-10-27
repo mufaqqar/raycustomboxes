@@ -39,7 +39,7 @@ export default async function BlogPostPage({ params }: Props) {
     return (
         <main className="bg-background">
             <section className="bg-background">
-                <div className="container mx-auto px-4 py-10 md:py-14">
+                <div className="max-w-[1400px] mx-auto px-5 sm:px-10 py-10 md:py-14">
                     <nav
                         aria-label="Breadcrumb"
                         className="mb-4 flex flex-wrap items-center gap-2 text-sm text-primary"
@@ -74,7 +74,7 @@ export default async function BlogPostPage({ params }: Props) {
             </section>
 
             <section className="pb-10">
-                <div className="container mx-auto px-4">
+                <div className="max-w-[1400px] mx-auto px-5 sm:px-10">
                     <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[18px] bg-[#f0f1f6]">
                         <Image
                             src={post.image}
@@ -89,7 +89,7 @@ export default async function BlogPostPage({ params }: Props) {
             </section>
 
             <section className="bg-white py-10 md:py-14">
-                <div className="container mx-auto px-4">
+                <div className="max-w-[1400px] mx-auto px-5 sm:px-10">
                     <article className="mx-auto max-w-[840px] space-y-9">
                         {post.sections.map((section, index) => (
                             <div key={section.heading ?? index}>
@@ -133,7 +133,7 @@ export default async function BlogPostPage({ params }: Props) {
 
             {related.length > 0 && (
                 <section className="py-10 md:py-14">
-                    <div className="container mx-auto px-4">
+                    <div className="max-w-[1400px] mx-auto px-5 sm:px-10">
                         <h2 className="mb-6 text-2xl font-extrabold leading-tight text-primary md:text-[32px]">
                             Related Articles
                         </h2>

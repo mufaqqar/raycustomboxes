@@ -66,7 +66,7 @@ export default function PackagingSteps() {
 
     return (
         <section className="relative overflow-hidden bg-primary py-16">
-            <div className="mx-auto container px-4 ">
+            <div className="mx-auto max-w-[1400px] px-5 sm:px-10">
                 {/* Heading */}
                 <h2 className="md:text-[32px] text-2xl font-extrabold leading-tight text-white/80 mb-4">
                     Custom Boxes And Packaging{" "}

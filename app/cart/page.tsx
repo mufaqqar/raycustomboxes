@@ -20,7 +20,7 @@ export default function CartPage() {
             />
 
             <section className="bg-white py-12 md:py-16">
-                <div className="container mx-auto px-4">
+                <div className="max-w-[1400px] mx-auto px-5 sm:px-10">
                     <div className="mx-auto flex max-w-[680px] flex-col items-center rounded-[18px] border border-RC_border bg-background px-6 py-12 text-center">
                         <span className="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                             <FiShoppingBag size={26} />

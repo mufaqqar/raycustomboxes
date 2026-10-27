@@ -12,7 +12,7 @@ const stats = [
 export default function AboutHero() {
     return (
         <section className="bg-background">
-            <div className="container mx-auto grid grid-cols-1 items-center gap-10 px-4 py-10 lg:grid-cols-2 lg:gap-14 md:py-14">
+            <div className="max-w-[1400px] mx-auto grid grid-cols-1 items-center gap-10 px-5 sm:px-10 py-10 lg:grid-cols-2 lg:gap-14 md:py-14">
                 {/* Left Content */}
                 <div>
                     {/* Breadcrumb */}

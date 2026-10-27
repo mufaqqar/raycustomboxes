@@ -39,7 +39,7 @@ const Header = () => {
                         <IoLogoWhatsapp size={18} />  WhatsApp Us
                     </Link>
             </div>
-            <div className='container mx-auto px-4 md:py-3 py-1.5 flex items-center justify-between border-b border-RC_border md:border-none'>
+            <div className='max-w-[1400px] mx-auto px-5 sm:px-10 md:py-3 py-1.5 flex items-center justify-between border-b border-RC_border md:border-none'>
                 <div>
                     <Link href="/" className="inline-flex">
                         <Image src="/images/logoblack.png" alt="logo" width={220} height={61} className="md:w-[200px] w-[150px] md:h-auto" />
@@ -76,7 +76,7 @@ const Header = () => {
                     </button>
                 </div>
             </div>
-            <div className="container mx-auto px-4 md:flex hidden items-center justify-between bg-white py-2 border border-RC_border/50 rounded">
+            <div className="max-w-[1400px] mx-auto px-5 sm:px-10 md:flex hidden items-center justify-between bg-white py-2 border border-RC_border/50 rounded">
                 <nav>
                     <ul ref={navRef} className="flex md:flex-row gap-x-6 lg:gap-x-10 items-center justify-start">
                         {links.map((item) => (

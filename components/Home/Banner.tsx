@@ -5,7 +5,7 @@ import { FaRegStar } from 'react-icons/fa'
 const Banner = () => {
     return (
         <section className='pb-8 pt-5 md:py-10 lg:py-16 bg-[linear-gradient(to_bottom,#f7f8fc_0%,#f7f8fc_60%,#e9ecf5_100%)]'>
-            <div className='container mx-auto px-4 flex md:flex-row flex-col gap-10 justify-between'>
+            <div className='max-w-[1400px] mx-auto px-5 sm:px-10 flex md:flex-row flex-col gap-10 justify-between'>
                 <div className='md:w-1/2 w-full'>
                     <h1 className='md:text-4xl text-xl font-extrabold text-primary mb-3'>
                         Custom Printed Boxes & Packaging Solutions in USA

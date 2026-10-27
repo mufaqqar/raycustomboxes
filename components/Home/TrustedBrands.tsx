@@ -168,7 +168,7 @@ export default function TrustedBrands() {
 
     return (
         <section className="w-full bg-gradient-to-b from-[#f7f7fc] via-white to-[#f7f7fc] px-4 py-10 sm:px-0 sm:py-14 lg:py-16">
-            <div className="mx-auto container rounded-xl bg-white/75 px-4 py-7 sm:px-7 sm:py-10">
+            <div className="mx-auto max-w-[1400px] rounded-xl bg-white/75 py-7 px-5 sm:px-10 sm:py-10">
 
                 {/* Section heading */}
                 <div className="mx-auto max-w-2xl text-center">

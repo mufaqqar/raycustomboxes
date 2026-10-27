@@ -29,7 +29,7 @@ export default function ReviewsPage() {
             />
 
             <section className="bg-white py-10 md:py-12">
-                <div className="container mx-auto px-4">
+                <div className="max-w-[1400px] mx-auto px-5 sm:px-10">
                     <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
                         {stats.map(({ icon: Icon, value, label }) => (
                             <div
