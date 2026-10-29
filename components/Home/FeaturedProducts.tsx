@@ -1,10 +1,18 @@
 import Link from 'next/link'
 import React from 'react'
-import { Products } from '@/data/Products'
+import { getProducts } from '@/lib/wordpress'
+import type { Product } from '@/data/Products'
 import ProductBox from '../Product/ProductBox'
 
-const FeaturedProducts = ({ categories }: any) => {
-    const items = Products.slice(0, 8)
+type Props = {
+    products?: Product[];
+    limit?: number;
+};
+
+const FeaturedProducts = async ({ products, limit = 8 }: Props = {}) => {
+    const source =
+        products && products.length > 0 ? products : await getProducts()
+    const items = source.slice(0, limit)
     return (
         <section className='py-10'>
             <div className='max-w-[1400px] mx-auto px-5 sm:px-10 mb-8 flex md:flex-row flex-col md:gap-10 gap-8 items-center justify-between'>
@@ -33,5 +41,3 @@ const FeaturedProducts = ({ categories }: any) => {
 }
 
 export default FeaturedProducts
-
-

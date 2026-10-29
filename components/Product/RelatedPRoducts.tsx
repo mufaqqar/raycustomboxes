@@ -1,9 +1,14 @@
 import React from 'react'
 import ProductBox from './ProductBox'
-import { Products } from '@/data/Products'
+import { getRelatedProducts } from '@/lib/wordpress'
 
-const RelatedProducts = () => {
-    const relatedProducts = Products.slice(0, 4)
+type Props = {
+    slug?: string;
+    limit?: number;
+};
+
+const RelatedProducts = async ({ slug = '', limit = 4 }: Props) => {
+    const relatedProducts = await getRelatedProducts(slug, limit)
 
     return (
         <section className="pt-5 pb-16">

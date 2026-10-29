@@ -8,23 +8,27 @@ import Faqs from "@/components/Home/Faqs";
 import PackagingSteps from "@/components/Home/PackagingSteps";
 import TrustedBrands from "@/components/Home/TrustedBrands";
 import { notFound } from "next/navigation";
-import { Categories, getCategory } from "@/data/Categories";
+import { getCategoryPage, getCategories } from "@/lib/wordpress";
 
 type Props = {
     params: Promise<{ slug: string }>;
 };
 
-export function generateStaticParams() {
-    return Categories.map((category) => ({ slug: category.slug }));
+export async function generateStaticParams() {
+    const categories = await getCategories();
+
+    return categories.map((category) => ({ slug: category.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
-    const category = getCategory(slug);
+    const result = await getCategoryPage(slug);
 
-    if (!category) {
+    if (!result) {
         return { title: "Category Not Found | Ray Custom Boxes" };
     }
+
+    const { category } = result;
 
     return {
         title: `${category.name} | Ray Custom Boxes`,
@@ -34,15 +38,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CategoryPage({ params }: Props) {
     const { slug } = await params;
-    const category = getCategory(slug);
+    const result = await getCategoryPage(slug);
 
-    if (!category) return notFound();
+    if (!result) return notFound();
+
+    const { category, products } = result;
 
     return (
         <main>
             <CategoryHero category={category} />
             <ProductSearch />
-            <FeaturedProducts />
+            <FeaturedProducts products={products} />
             <CateInfo />
             <PackagingSteps />
             <TrustedBrands />

@@ -6,26 +6,29 @@ import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 import { useState } from "react";
 
-const blogs = [
+type BlogCard = {
+    slug: string;
+    title: string;
+    image: string;
+};
+
+const fallbackBlogs: BlogCard[] = [
     {
-        id: 1,
+        slug: "types-of-packaging",
         title:
             "Types of Packaging: A Complete Guide to Packaging Materials,...",
-        href: "/blog/types-of-packaging",
         image: "/images/gallery/1.jpg",
     },
     {
-        id: 2,
+        slug: "shoe-box-dimensions",
         title:
             "Shoe Box Dimensions: Complete Guide to Standard, Average, and...",
-        href: "/blog/shoe-box-dimensions",
         image: "/images/gallery/2.jpg",
     },
     {
-        id: 3,
+        slug: "what-is-corrugate",
         title:
             "What Is Corrugate? Types, Materials, Uses and Benefits",
-        href: "/blog/what-is-corrugate",
         image: "/images/gallery/3.jpg",
     },
 ];
@@ -59,7 +62,8 @@ function ProductImage({
     );
 }
 
-export default function BlogSection() {
+export default function BlogSection({ posts }: { posts?: BlogCard[] }) {
+    const blogs = posts && posts.length > 0 ? posts : fallbackBlogs;
 
     return (
         <section className="py-16">
@@ -89,12 +93,12 @@ export default function BlogSection() {
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:gap-2">
                     {blogs.map((blog) => (
                         <article
-                            key={blog.id}
+                            key={blog.slug}
                             className="group flex min-w-0 flex-col overflow-hidden rounded-[9px] border border-[#d9d9e5] bg-white transition-shadow duration-200 hover:shadow-[0_4px_12px_rgba(30,20,70,0.09)]"
                         >
                             {/* IMAGE: SAME HEIGHT ON ALL CARDS */}
                             <Link
-                                href={blog.href}
+                                href={`/blog/${blog.slug}`}
                                 aria-label={blog.title}
                                 className="block h-[150px] shrink-0 overflow-hidden sm:h-[175px] lg:h-[clamp(96px,12vw,250px)]"
                             >
@@ -103,7 +107,7 @@ export default function BlogSection() {
 
                             {/* TEXT AREA */}
                             <div className="flex min-h-[62px] flex-1 flex-col px-2.5 pb-2 pt-1.5 sm:px-3">
-                                <Link href={blog.href}>
+                                <Link href={`/blog/${blog.slug}`}>
                                     <h3 className="text-lg font-medium mt-2 text-primary hover:text-prim_hovr">
                                         {blog.title}
                                     </h3>
@@ -111,7 +115,7 @@ export default function BlogSection() {
 
                                 <div className="mt-auto pt-2">
                                     <Link
-                                        href={blog.href}
+                                        href={`/blog/${blog.slug}`}
                                         className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-prim_hovr"
                                     >
                                         Read More <FiArrowRight size={10} />

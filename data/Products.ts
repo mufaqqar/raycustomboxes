@@ -6,6 +6,8 @@ export type Product = {
     image: string;
     startingPrice: string;
     description: string;
+    /** Optional gallery image URLs (WordPress media). */
+    gallery?: string[];
 };
 
 export const Products: Product[] = [

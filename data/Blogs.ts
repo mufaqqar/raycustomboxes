@@ -11,6 +11,8 @@ export type BlogPost = {
     image: string;
     excerpt: string;
     sections: BlogSection[];
+    /** Raw HTML body from WordPress. Takes precedence over `sections`. */
+    contentHtml?: string;
 };
 
 export const Blogs: BlogPost[] = [

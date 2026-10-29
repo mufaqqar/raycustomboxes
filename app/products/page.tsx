@@ -4,8 +4,7 @@ import PageHero from "@/components/Common/PageHero";
 import ProductCard from "@/components/Product/ProductCard";
 import CTA from "@/components/Home/CTA";
 import PackagingSteps from "@/components/Home/PackagingSteps";
-import { Categories } from "@/data/Categories";
-import { Products } from "@/data/Products";
+import { getCategories, getProducts } from "@/lib/wordpress";
 
 export const metadata: Metadata = {
     title: "All Products | Ray Custom Boxes",
@@ -13,7 +12,12 @@ export const metadata: Metadata = {
         "Browse every custom packaging product we manufacture: mailer boxes, corrugated boxes, rigid boxes, folding cartons, mylar pouches and more. Free design support and fast US shipping.",
 };
 
-export default function AllProductsPage() {
+export default async function AllProductsPage() {
+    const [products, categories] = await Promise.all([
+        getProducts(),
+        getCategories(),
+    ]);
+
     return (
         <main className="bg-background">
             <PageHero
@@ -26,7 +30,7 @@ export default function AllProductsPage() {
                 <div className="max-w-[1400px] mx-auto px-5 sm:px-10">
                     {/* Category chips */}
                     <div className="mb-10 flex flex-wrap gap-2">
-                        {Categories.map((category) => (
+                        {categories.map((category) => (
                             <Link
                                 key={category.slug}
                                 href={`/category/${category.slug}`}
@@ -39,7 +43,7 @@ export default function AllProductsPage() {
 
                     {/* Product grid */}
                     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                        {Products.map((product) => (
+                        {products.map((product) => (
                             <ProductCard key={product.slug} product={product} />
                         ))}
                     </div>

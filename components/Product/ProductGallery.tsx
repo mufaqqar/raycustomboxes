@@ -5,14 +5,15 @@ import { useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image from "next/image";
 
-const images = [
+const fallbackImages = [
     "/images/gallery/1.jpg",
     "/images/gallery/2.jpg",
     "/images/gallery/3.jpg",
     "/images/gallery/4.jpg",
 ];
 
-export default function ProductGallery() {
+export default function ProductGallery({ images }: { images?: string[] }) {
+    const gallery = images && images.length > 0 ? images : fallbackImages;
     const sliderRef = useRef<Slider>(null);
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -37,7 +38,7 @@ export default function ProductGallery() {
     return (
         <div className="flex gap-4 h-fit overflow-hidden">
             <div className="md:w-1/5 flex flex-col gap-3 max-h-[526px] overscroll-y-auto">
-                {images.map((img, index) => (
+                {gallery.map((img, index) => (
                     <div
                         key={index}
                         onClick={() => sliderRef.current?.slickGoTo(index)}
@@ -57,7 +58,7 @@ export default function ProductGallery() {
             </div>
             <div className="relative md:w-4/5 z-1">
                 <Slider ref={sliderRef} {...settings}>
-                    {images.map((img, index) => (
+                    {gallery.map((img, index) => (
                         <div
                             key={index}
                             className="relative w-full aspect-square overflow-hidden rounded-lg bg-[#f5f5f5]"

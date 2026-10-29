@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 import PageHero from "@/components/Common/PageHero";
 import CTA from "@/components/Home/CTA";
-import { Blogs } from "@/data/Blogs";
+import { getBlogPosts } from "@/lib/wordpress";
 
 export const metadata: Metadata = {
     title: "Packaging Blog | Ray Custom Boxes",
@@ -12,7 +12,9 @@ export const metadata: Metadata = {
         "Packaging guides, sizing charts, material comparisons and design ideas from the Ray Custom Boxes team.",
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+    const posts = await getBlogPosts();
+
     return (
         <main className="bg-background">
             <PageHero
@@ -24,7 +26,7 @@ export default function BlogPage() {
             <section className="bg-white py-10 md:py-14">
                 <div className="max-w-[1400px] mx-auto px-5 sm:px-10">
                     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                        {Blogs.map((post) => (
+                        {posts.map((post) => (
                             <article
                                 key={post.slug}
                                 className="group flex min-w-0 flex-col overflow-hidden rounded-[18px] border border-RC_border bg-white transition-shadow duration-300 hover:shadow-[0_14px_34px_rgb(56,56,130,0.14)]"

@@ -7,19 +7,21 @@ import CTA from "@/components/Home/CTA";
 import PackagingSteps from "@/components/Home/PackagingSteps";
 import TrustedBrands from "@/components/Home/TrustedBrands";
 import { notFound } from "next/navigation";
-import { Products, getProduct } from "@/data/Products";
+import { getProduct, getProducts } from "@/lib/wordpress";
 
 type Props = {
     params: Promise<{ slug: string }>;
 };
 
-export function generateStaticParams() {
-    return Products.map((product) => ({ slug: product.slug }));
+export async function generateStaticParams() {
+    const products = await getProducts();
+
+    return products.map((product) => ({ slug: product.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
-    const product = getProduct(slug);
+    const product = await getProduct(slug);
 
     if (!product) {
         return { title: "Product Not Found | Ray Custom Boxes" };
@@ -33,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProductPage({ params }: Props) {
     const { slug } = await params;
-    const product = getProduct(slug);
+    const product = await getProduct(slug);
 
     if (!product) return notFound();
 
@@ -42,7 +44,7 @@ export default async function ProductPage({ params }: Props) {
             <ProBanner data={product} />
             <Feature />
             <ProTabs />
-            <RelatedPRoducts />
+            <RelatedPRoducts slug={slug} />
             <PackagingSteps />
             <TrustedBrands />
             <CTA />

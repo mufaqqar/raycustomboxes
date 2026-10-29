@@ -4,19 +4,21 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FiArrowRight, FiChevronRight } from "react-icons/fi";
 import CTA from "@/components/Home/CTA";
-import { Blogs, getBlog, getRelatedBlogs } from "@/data/Blogs";
+import { getBlogPost, getBlogPosts, getRelatedBlogPosts } from "@/lib/wordpress";
 
 type Props = {
     params: Promise<{ slug: string }>;
 };
 
-export function generateStaticParams() {
-    return Blogs.map((post) => ({ slug: post.slug }));
+export async function generateStaticParams() {
+    const posts = await getBlogPosts();
+
+    return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
-    const post = getBlog(slug);
+    const post = await getBlogPost(slug);
 
     if (!post) {
         return { title: "Article Not Found | Ray Custom Boxes" };
@@ -30,11 +32,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
     const { slug } = await params;
-    const post = getBlog(slug);
+    const post = await getBlogPost(slug);
 
     if (!post) return notFound();
 
-    const related = getRelatedBlogs(slug);
+    const related = await getRelatedBlogPosts(slug);
 
     return (
         <main className="bg-background">
@@ -91,26 +93,33 @@ export default async function BlogPostPage({ params }: Props) {
             <section className="bg-white py-10 md:py-14">
                 <div className="max-w-[1400px] mx-auto px-5 sm:px-10">
                     <article className="mx-auto max-w-[840px] space-y-9">
-                        {post.sections.map((section, index) => (
-                            <div key={section.heading ?? index}>
-                                {section.heading && (
-                                    <h2 className="mb-3 text-xl font-extrabold leading-tight text-primary md:text-2xl">
-                                        {section.heading}
-                                    </h2>
-                                )}
+                        {post.contentHtml ? (
+                            <div
+                                className="wp-content"
+                                dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+                            />
+                        ) : (
+                            post.sections.map((section, index) => (
+                                <div key={section.heading ?? index}>
+                                    {section.heading && (
+                                        <h2 className="mb-3 text-xl font-extrabold leading-tight text-primary md:text-2xl">
+                                            {section.heading}
+                                        </h2>
+                                    )}
 
-                                <div className="space-y-3">
-                                    {section.paragraphs.map((paragraph) => (
-                                        <p
-                                            key={paragraph}
-                                            className="text-[15px] leading-[27px] text-desc"
-                                        >
-                                            {paragraph}
-                                        </p>
-                                    ))}
+                                    <div className="space-y-3">
+                                        {section.paragraphs.map((paragraph) => (
+                                            <p
+                                                key={paragraph}
+                                                className="text-[15px] leading-[27px] text-desc"
+                                            >
+                                                {paragraph}
+                                            </p>
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))
+                        )}
 
                         <div className="rounded-[12px] border border-RC_border bg-background p-6">
                             <h2 className="mb-2 text-lg font-bold text-primary">

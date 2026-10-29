@@ -15,8 +15,15 @@ import ScrollContent from "@/components/Home/ScrollContent";
 import Sustainable from "@/components/Home/Sustainable";
 import TrustedBrands from "@/components/Home/TrustedBrands";
 import WhoWeAre from "@/components/Home/WhoWeAre";
+import { getBlogPosts } from "@/lib/wordpress";
 
-export default function Home() {
+export default async function Home() {
+  const posts = (await getBlogPosts()).slice(0, 3).map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    image: post.image,
+  }));
+
   return (
     <main>
       <Banner />
@@ -34,7 +41,7 @@ export default function Home() {
       <Faqs />
       <TrustedBrands />
       <CustomerReviews />
-      <BlogSection />
+      <BlogSection posts={posts} />
       <CTA />
     </main>
   );

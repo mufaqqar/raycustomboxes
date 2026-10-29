@@ -9,7 +9,7 @@ const ProBanner = ({ data }: { data: Product }) => {
     return (
         <section className='pt-8 bg-background'>
             <div className='max-w-[1400px] mx-auto px-5 sm:px-10 grid md:grid-cols-2 grid-cols-1 gap-8 lg:gap-10'>
-                <ProductGallery />
+                <ProductGallery images={data.gallery} />
                 <div>
                     <div className='bg-white px-5 py-5 rounded-[18px] border border-RC_border'>
                         <BreadCrumb title={data.name} />
